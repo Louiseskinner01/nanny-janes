@@ -1,0 +1,61 @@
+main{
+    background-color: rgb(254, 255, 168);
+    width: 900px;
+    margin: auto;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.navbar {
+    background-color: rgb(243, 249, 255) ;
+}
+
+footer{
+    margin-top: 30px;
+    display: inline-flex;
+    width: 100%;
+    background-color: rgb(243, 249, 255);
+}
+
+#footer-follow{
+width: 50%;
+margin: 5px;
+
+}
+
+footer h3{
+    margin-left: 35%;  
+}
+
+#footer-map{
+    width: 50%;
+    margin: 5px;
+}
+
+#footer-span{
+    margin-top: 50px;
+}
+
+main h1{
+    margin-left: 35%;
+    color: rgb(22, 103, 11);
+}
+
+main h3{
+    margin-left: 35%;
+}
+
+li{
+    list-style: none;
+}
+
+.carousel-inner {
+    border-radius: 30px;
+}
+.carousel-item {
+    width: 100%;
+    
+}

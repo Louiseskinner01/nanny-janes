@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nanny Janes</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/stylesheet.css">
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
@@ -13,26 +13,115 @@
 <body>
     
 <header>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="https://www.instagram.com/nannyjanesnursery/?hl=en">
-
+<nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand ms-3" href="https://www.instagram.com/nannyjanesnursery/?hl=en">
+        <img src="assets/images/nanny-janes-logo.jpg" alt="company logo" height="120">
     </a>
-
+    <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Home</a>
+              </li>
+          
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Careers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact us</a>
+              </li> 
+        </ul>
+      </div>
 </nav>
 
 </header>
 
 <main>
 <div class="container-fluid">
+<h1>Nanny Janes</h1>
+
+<section id="about">
+    <h2>About us</h2>
+  <h3>Founder</h3>
+  <p>A family owned business with over 35 years childcare experience. Jane Ann is a well respected and loved pillar of the community who is constantly striving to give children the best early education.</p>
+  <h3>Mission Statement</h3>
+  <p> We care for children in an home away from home environment where learning is fun so that love of learning is the foundation for a child’s life. We provide an environment where children can develop life skills that will set them up for a life of success. We encourage imitative play in resource-rich environments so children develop the social skills for the next few years in their lives. </p>
+
+   <h3>Ages and times</h3>
+   <p><li>From 6 months to 48 months</li>
+        <li>Open Hours </li>      
+        <li>Monday - Friday: 7:30am - 6:30pm</li>        
+       <li>Saturday - Sunday: Closed</li></p>
+</section>
+
+<section id="galary">
+    <h2>Photo galary</h2>
+    <div id="carousel" class="carousel slide">
+        <div class="carousel-inner mb-3">
+          <div class="carousel-item active">
+            <img src="assets/images/Screenshot 2025-11-21 at 15.13.20.png" class="d-block w-100 h-50" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/nanny-janes-logo.jpg" class="d-block w-100 h-50" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/nanny-janes-logo.jpg" class="d-block w-100 h-50" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</section>
+
+<section id="contact">
+    <h2>Contat us</h2>
+    <div>
+        <label for="exampleFormControlInput1" class="form-label">First and last name</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="enter your name">
+      </div>
+      <div>
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com">
+      </div>
+      <div>
+        <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+        <textarea class="form-control mb-3" id="exampleFormControlTextarea1" rows="3" placeholder="type your message here..."></textarea>
+      </div>
+</section>
+
 
 </div>
 </main>
 
 <footer>
+<div id="footer-map">
+    <h3>Where to find us</h3>
+    <li>Nanny Janes Nursery</li>
+    <li>220 Essex Road,London,</li>
+    <li>Islington,</li>
+    <li>N1 3AP</li>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.489628935615!2d-0.09471480000004194!3d51.540920199999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b060560cfff%3A0x60d53d0c64a53560!2sNanny%20Janes%20Nursery!5e0!3m2!1sen!2suk!4v1764284911092!5m2!1sen!2suk"  width="430" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<div id="footer-follow">
+    <h3>Follow us</h3>
+    <li><span>Instagram </span><i class="fa-brands fa-instagram"></i></li>
+    <span id="footer-span">Copyright © 2023 Nanny Janes Nursery - All Rights Reserved.</span>
+    
+    </div>
 
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-
+<script src="https://kit.fontawesome.com/24a4f7102d.js" crossorigin="anonymous"></script>
 </body>
 </html>
