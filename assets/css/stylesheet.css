@@ -59,3 +59,14 @@ li{
 enrolement-styling {
 display: inline-flex;
 }
+
+#form-contact label{
+    margin-bottom: 2px;
+    margin-top: 20px;
+}
+
+#cv-span {
+    font-style: italic;
+    font-size: smaller;
+    margin-left: 5px;
+}
