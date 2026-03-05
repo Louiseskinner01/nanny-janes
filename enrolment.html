@@ -82,7 +82,7 @@
                         <div class="form-step">
                             <!-- Religion -->
                             <div class="mb-3">
-                                <label for="childReligion" class="form-label">Religion</label>
+                                <label for="childReligion" class="form-label"><strong>Religion</strong></label>
                                 <select class="form-select" id="childReligion" multiple>
                                     <option>No Religion / No Belief</option>
                                     <option>Atheist</option>
@@ -99,80 +99,96 @@
 
                             <!-- Ethnicity -->
                             <div class="mb-3">
-                                <label class="form-label">Ethnicity</label>
+                                <label class="form-label"><strong>Ethnicity</strong></label>
                                 <div class="row">
                                     <!-- Asian -->
                                     <div class="col-md-6 mb-3">
                                         <h6>Asian</h6>
-                                        <div class="btn-group d-flex flex-wrap gap-2" role="group">
-                                            <button type="button"
-                                                class="btn btn-outline-secondary flex-fill">Indian</button>
-                                            <button type="button"
-                                                class="btn btn-outline-secondary flex-fill">Pakistani</button>
-                                            <button type="button"
-                                                class="btn btn-outline-secondary flex-fill">Bangladeshi</button>
-                                            <button type="button" class="btn btn-outline-secondary flex-fill">Other
-                                                Asian</button>
-                                        </div>
+<div class="btn-group d-flex flex-wrap gap-2" role="group" aria-label="Asian Ethnicity">
+  <input type="radio" class="btn-check" name="ethnicity" id="ethnicityIndian" autocomplete="off" value="Indian" required>
+  <label class="btn btn-outline-secondary flex-fill" for="ethnicityIndian">Indian</label>
+
+  <input type="radio" class="btn-check" name="ethnicity" id="ethnicityPakistani" autocomplete="off" value="Pakistani" required>
+  <label class="btn btn-outline-secondary flex-fill" for="ethnicityPakistani">Pakistani</label>
+
+  <input type="radio" class="btn-check" name="ethnicity" id="ethnicityBangladeshi" autocomplete="off" value="Bangladeshi" required>
+  <label class="btn btn-outline-secondary flex-fill" for="ethnicityBangladeshi">Bangladeshi</label>
+
+  <input type="radio" class="btn-check" name="ethnicity" id="ethnicityOtherAsian" autocomplete="off" value="Other Asian" required>
+  <label class="btn btn-outline-secondary flex-fill" for="ethnicityOtherAsian">Other Asian</label>
+</div>
                                     </div>
 
                                     <!-- Black / African / Caribbean -->
                                     <div class="col-md-6 mb-3">
                                         <h6>Black / African / Caribbean</h6>
-                                        <div class="btn-group d-flex flex-wrap gap-2" role="group">
-                                            <button type="button"
-                                                class="btn btn-outline-secondary flex-fill">Caribbean</button>
-                                            <button type="button"
-                                                class="btn btn-outline-secondary flex-fill">African</button>
-                                            <button type="button"
-                                                class="btn btn-outline-secondary flex-fill">Other</button>
-                                        </div>
+<div class="btn-group d-flex flex-wrap gap-2" role="group" aria-label="Black Ethnicity">
+  <input type="radio" class="btn-check" name="ethnicity" id="ethnicityCaribbean" autocomplete="off" value="Caribbean" required>
+  <label class="btn btn-outline-secondary flex-fill" for="ethnicityCaribbean">Caribbean</label>
+
+  <input type="radio" class="btn-check" name="ethnicity" id="ethnicityAfrican" autocomplete="off" value="African" required>
+  <label class="btn btn-outline-secondary flex-fill" for="ethnicityAfrican">African</label>
+
+  <input type="radio" class="btn-check" name="ethnicity" id="ethnicityOtherBlack" autocomplete="off" value="Other Black" required>
+  <label class="btn btn-outline-secondary flex-fill" for="ethnicityOtherBlack">Other Black</label>
+</div>
                                     </div>
                                 </div>
 
-                                <!-- Mixed & White -->
+                                <!-- Mixed -->
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <h6>Mixed / Multiple</h6>
-                                        <div class="btn-group d-flex flex-wrap gap-2" role="group">
-                                            <button type="button" class="btn btn-outline-secondary flex-fill">White &
-                                                Black Caribbean</button>
-                                            <button type="button" class="btn btn-outline-secondary flex-fill">White &
-                                                Black African</button>
-                                            <button type="button" class="btn btn-outline-secondary flex-fill">White &
-                                                Asian</button>
-                                            <button type="button" class="btn btn-outline-secondary flex-fill">Other
-                                                Mixed</button>
-                                        </div>
+<div class="btn-group d-flex flex-wrap gap-2" role="group" aria-label="Mixed Ethnicity">
+  <input type="radio" class="btn-check" name="ethnicity" id="ethnicityWhiteBlackCaribbean" autocomplete="off" value="White & Black Caribbean" required>
+  <label class="btn btn-outline-secondary flex-fill" for="ethnicityWhiteBlackCaribbean">White & Black Caribbean</label>
+
+  <input type="radio" class="btn-check" name="ethnicity" id="ethnicityWhiteBlackAfrican" autocomplete="off" value="White & Black African" required>
+  <label class="btn btn-outline-secondary flex-fill" for="ethnicityWhiteBlackAfrican">White & Black African</label>
+
+  <input type="radio" class="btn-check" name="ethnicity" id="ethnicityWhiteAsian" autocomplete="off" value="White & Asian" required>
+  <label class="btn btn-outline-secondary flex-fill" for="ethnicityWhiteAsian">White & Asian</label>
+
+  <input type="radio" class="btn-check" name="ethnicity" id="ethnicityOtherMixed" autocomplete="off" value="Other Mixed" required>
+  <label class="btn btn-outline-secondary flex-fill" for="ethnicityOtherMixed">Other Mixed</label>
+</div>
                                     </div>
                                     <div class="col-md-6 mb-3">
+                                        
                                         <h6>White</h6>
-                                        <div class="btn-group d-flex flex-wrap gap-2" role="group">
-                                            <button type="button" class="btn btn-outline-secondary flex-fill">English /
-                                                Welsh / Scottish / NI</button>
-                                            <button type="button"
-                                                class="btn btn-outline-secondary flex-fill">Irish</button>
-                                            <button type="button" class="btn btn-outline-secondary flex-fill">Gypsy /
-                                                Traveller</button>
-                                            <button type="button" class="btn btn-outline-secondary flex-fill">Other
-                                                White</button>
-                                        </div>
+<div class="btn-group d-flex flex-wrap gap-2" role="group" aria-label="White Ethnicity">
+  <input type="radio" class="btn-check" name="ethnicity" id="ethnicityEnglish" autocomplete="off" value="English / Welsh / Scottish / NI" required>
+  <label class="btn btn-outline-secondary flex-fill" for="ethnicityEnglish">English / Welsh / Scottish / NI</label>
+
+  <input type="radio" class="btn-check" name="ethnicity" id="ethnicityIrish" autocomplete="off" value="Irish" required>
+  <label class="btn btn-outline-secondary flex-fill" for="ethnicityIrish">Irish</label>
+
+  <input type="radio" class="btn-check" name="ethnicity" id="ethnicityGypsy" autocomplete="off" value="Gypsy / Traveller" required>
+  <label class="btn btn-outline-secondary flex-fill" for="ethnicityGypsy">Gypsy / Traveller</label>
+
+  <input type="radio" class="btn-check" name="ethnicity" id="ethnicityOtherWhite" autocomplete="off" value="Other White" required>
+  <label class="btn btn-outline-secondary flex-fill" for="ethnicityOtherWhite">Other White</label>
+</div>
+
                                     </div>
                                 </div>
 
                                 <!-- Other -->
                                 <div class="mb-3">
-                                    <h6>Other</h6>
-                                    <div class="btn-group d-flex flex-wrap gap-2" role="group">
-                                        <button type="button" class="btn btn-outline-secondary flex-fill">Arab</button>
-                                        <button type="button" class="btn btn-outline-secondary flex-fill">Other</button>
-                                    </div>
+                                    <h6>Other Ethnic Group</h6>
+<div class="btn-group d-flex flex-wrap gap-2" role="group" aria-label="Other Ethnicity">
+  <input type="radio" class="btn-check" name="ethnicity" id="ethnicityArab" autocomplete="off" value="Arab" required>
+  <label class="btn btn-outline-secondary flex-fill" for="ethnicityArab">Arab</label>
+
+  <input type="radio" class="btn-check" name="ethnicity" id="ethnicityOther" autocomplete="off" value="Other Ethnic Group" required>
+  <label class="btn btn-outline-secondary flex-fill" for="ethnicityOther">Other</label>
+</div>
                                 </div>
                             </div>
 
                             <!-- Home language -->
                             <div class="mb-3">
-                                <label for="homeLanguage" class="form-label">Home Language</label>
+                                <label for="homeLanguage" class="form-label"><strong>Home Language</strong></label>
                                 <input type="text" class="form-control" id="homeLanguage"
                                     placeholder="Language spoken at home">
                             </div>
@@ -199,7 +215,6 @@
                             <li><strong>PM:</strong> 1:00pm – 6:00pm (Including snack and tea)</li>
                             <li><strong>A/D:</strong> 8:00am – 6:00pm (Including all meals and snacks)</li>
                         </ul>
-                        
                             <div class="row g-3">
                                 <!-- AM Sessions -->
                                 <div class="col-md-4">
