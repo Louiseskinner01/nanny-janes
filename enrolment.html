@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanny Janes</title>
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/enrolment-stylehseet.css">
+</head>
+
+<div class="container my-3">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+
+            <div class="progress mb-4">
+                <div id="form-progress" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0"
+                    aria-valuemin="0" aria-valuemax="100">
+                    Step 1
+                </div>
+            </div>
+            <form id="enrolment-form">
+                <!-- Step 1: Child's Personal Information -->
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h2 class="mb-0">Child's Personal Information</h2>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="form-step">
+                            <div class="row mb-3">
+                                <div class="col-md-6 mb-3">
+                                    <label for="childFirstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="childFirstName"
+                                        placeholder="First name">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="childLastName" class="form-label">Family Name</label>
+                                    <input type="text" class="form-control" id="childLastName"
+                                        placeholder="Family name">
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-6 mb-3">
+                                    <label for="childMiddleName" class="form-label">Middle Name(s)</label>
+                                    <input type="text" class="form-control" id="childMiddleName"
+                                        placeholder="Middle name(s)">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="childDOB" class="form-label">Date of Birth</label>
+                                    <input type="date" class="form-control" id="childDOB">
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="childAddress" class="form-label">Home Address (including postcode)</label>
+                                <textarea class="form-control" id="childAddress" rows="3"
+                                    placeholder="Enter full address"></textarea>
+                            </div>
+
+                            <div class="d-grid gap-2">
+                                <button type="button" class="btn btn-brown">Next Step</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Religion & Ethnicity -->
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h2 class="mb-0">Religion & Ethnicity</h2>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="form-step">
+                            <!-- Religion -->
+                            <div class="mb-3">
+                                <label for="childReligion" class="form-label">Religion</label>
+                                <select class="form-select" id="childReligion" multiple>
+                                    <option>No Religion / No Belief</option>
+                                    <option>Atheist</option>
+                                    <option>Buddhist</option>
+                                    <option>Christian</option>
+                                    <option>Hindu</option>
+                                    <option>Jewish</option>
+                                    <option>Muslim</option>
+                                    <option>Sikh</option>
+                                    <option>Rastafarian</option>
+                                    <option>Prefer not to say</option>
+                                </select>
+                            </div>
+
+                            <!-- Ethnicity -->
+                            <div class="mb-3">
+                                <label class="form-label">Ethnicity</label>
+                                <div class="row">
+                                    <!-- Asian -->
+                                    <div class="col-md-6 mb-3">
+                                        <h6>Asian</h6>
+                                        <div class="btn-group d-flex flex-wrap gap-2" role="group">
+                                            <button type="button"
+                                                class="btn btn-outline-secondary flex-fill">Indian</button>
+                                            <button type="button"
+                                                class="btn btn-outline-secondary flex-fill">Pakistani</button>
+                                            <button type="button"
+                                                class="btn btn-outline-secondary flex-fill">Bangladeshi</button>
+                                            <button type="button" class="btn btn-outline-secondary flex-fill">Other
+                                                Asian</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Black / African / Caribbean -->
+                                    <div class="col-md-6 mb-3">
+                                        <h6>Black / African / Caribbean</h6>
+                                        <div class="btn-group d-flex flex-wrap gap-2" role="group">
+                                            <button type="button"
+                                                class="btn btn-outline-secondary flex-fill">Caribbean</button>
+                                            <button type="button"
+                                                class="btn btn-outline-secondary flex-fill">African</button>
+                                            <button type="button"
+                                                class="btn btn-outline-secondary flex-fill">Other</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Mixed & White -->
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <h6>Mixed / Multiple</h6>
+                                        <div class="btn-group d-flex flex-wrap gap-2" role="group">
+                                            <button type="button" class="btn btn-outline-secondary flex-fill">White &
+                                                Black Caribbean</button>
+                                            <button type="button" class="btn btn-outline-secondary flex-fill">White &
+                                                Black African</button>
+                                            <button type="button" class="btn btn-outline-secondary flex-fill">White &
+                                                Asian</button>
+                                            <button type="button" class="btn btn-outline-secondary flex-fill">Other
+                                                Mixed</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <h6>White</h6>
+                                        <div class="btn-group d-flex flex-wrap gap-2" role="group">
+                                            <button type="button" class="btn btn-outline-secondary flex-fill">English /
+                                                Welsh / Scottish / NI</button>
+                                            <button type="button"
+                                                class="btn btn-outline-secondary flex-fill">Irish</button>
+                                            <button type="button" class="btn btn-outline-secondary flex-fill">Gypsy /
+                                                Traveller</button>
+                                            <button type="button" class="btn btn-outline-secondary flex-fill">Other
+                                                White</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Other -->
+                                <div class="mb-3">
+                                    <h6>Other</h6>
+                                    <div class="btn-group d-flex flex-wrap gap-2" role="group">
+                                        <button type="button" class="btn btn-outline-secondary flex-fill">Arab</button>
+                                        <button type="button" class="btn btn-outline-secondary flex-fill">Other</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Home language -->
+                            <div class="mb-3">
+                                <label for="homeLanguage" class="form-label">Home Language</label>
+                                <input type="text" class="form-control" id="homeLanguage"
+                                    placeholder="Language spoken at home">
+                            </div>
+
+                            <div class="d-grid gap-2">
+                                <button type="button" class="btn btn-secondary btn-prev">Previous</button>
+                                <button type="button" class="btn btn-brown">Next Step</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Nursery Booking Sessions -->
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h2 class="mb-0">Nursery Booking Sessions</h2>
+                    </div>
+                    <div class="card-body">
+
+                        <p>Please select the sessions you would like to register your child for:</p>
+                        <ul>
+                            <li><strong>AM:</strong> 8:00am – 1:00pm (Including breakfast, snack, lunch)</li>
+                            <li><strong>PM:</strong> 1:00pm – 6:00pm (Including snack and tea)</li>
+                            <li><strong>A/D:</strong> 8:00am – 6:00pm (Including all meals and snacks)</li>
+                        </ul>
+
+                        <div class="form-step">
+                            <div class="row g-3">
+
+                                <!-- AM Sessions -->
+                                <div class="col-md-4">
+                                    <h5 class="text-success">AM Sessions</h5>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="amMon">
+                                        <label class="form-check-label" for="amMon">Monday</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="amTue">
+                                        <label class="form-check-label" for="amTue">Tuesday</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="amWed">
+                                        <label class="form-check-label" for="amWed">Wednesday</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="amThu">
+                                        <label class="form-check-label" for="amThu">Thursday</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="amFri">
+                                        <label class="form-check-label" for="amFri">Friday</label>
+                                    </div>
+                                </div>
+
+                                <!-- PM Sessions -->
+                                <div class="col-md-4">
+                                    <h5 class="text-success">PM Sessions</h5>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="pmMon">
+                                        <label class="form-check-label" for="pmMon">Monday</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="pmTue">
+                                        <label class="form-check-label" for="pmTue">Tuesday</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="pmWed">
+                                        <label class="form-check-label" for="pmWed">Wednesday</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="pmThu">
+                                        <label class="form-check-label" for="pmThu">Thursday</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="pmFri">
+                                        <label class="form-check-label" for="pmFri">Friday</label>
+                                    </div>
+                                </div>
+
+                                <!-- All-Day Sessions -->
+                                <div class="col-md-4">
+                                    <h5 class="text-success">All-Day (A/D) Sessions</h5>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="adMon">
+                                        <label class="form-check-label" for="adMon">Monday</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="adTue">
+                                        <label class="form-check-label" for="adTue">Tuesday</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="adWed">
+                                        <label class="form-check-label" for="adWed">Wednesday</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="adThu">
+                                        <label class="form-check-label" for="adThu">Thursday</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="adFri">
+                                        <label class="form-check-label" for="adFri">Friday</label>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Optional Top-Up -->
+                            <div class="mt-3">
+                                <h5 class="text-success">Optional 7am-8am Top-Up</h5>
+                                <div class="row g-2">
+                                    <div class="col-md-2 col-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="topupMon">
+                                            <label class="form-check-label" for="topupMon">Monday</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="topupTue">
+                                            <label class="form-check-label" for="topupTue">Tuesday</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="topupWed">
+                                            <label class="form-check-label" for="topupWed">Wednesday</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="topupThu">
+                                            <label class="form-check-label" for="topupThu">Thursday</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="topupFri">
+                                            <label class="form-check-label" for="topupFri">Friday</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-grid gap-2 mt-3">
+                                <button type="button" class="btn btn-secondary btn-prev">Previous</button>
+                                <button type="button" class="btn btn-brown">Next Step</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Parent / Carer Information -->
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h2 class="mb-0">Parent / Carer Information</h2>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="form-step">
+                            <div class="row g-4">
+
+                                <!-- Mother / Carer -->
+                                <div class="col-md-6">
+                                    <h3 class="text-success">Mother / Carer</h3>
+                                    <div class="mb-3">
+                                        <label for="motherFirstName" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="motherFirstName"
+                                            placeholder="First Name">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="motherLastName" class="form-label">Family Name</label>
+                                        <input type="text" class="form-control" id="motherLastName"
+                                            placeholder="Family Name">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="motherAddress" class="form-label">Home Address</label>
+                                        <textarea class="form-control" id="motherAddress" rows="3"></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="motherMobile" class="form-label">Mobile Contact Number</label>
+                                        <input type="tel" class="form-control" id="motherMobile">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="motherEmail" class="form-label">Personal Email</label>
+                                        <input type="email" class="form-control" id="motherEmail">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="motherWorkAddress" class="form-label">Work Address</label>
+                                        <textarea class="form-control" id="motherWorkAddress" rows="3"></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="motherWorkNumber" class="form-label">Work Contact Number</label>
+                                        <input type="tel" class="form-control" id="motherWorkNumber">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="motherWorkEmail" class="form-label">Work Email</label>
+                                        <input type="email" class="form-control" id="motherWorkEmail">
+                                    </div>
+                                </div>
+
+                                <!-- Father / Carer -->
+                                <div class="col-md-6">
+                                    <h3 class="text-success">Father / Carer</h3>
+                                    <div class="mb-3">
+                                        <label for="fatherFirstName" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="fatherFirstName"
+                                            placeholder="First Name">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="fatherLastName" class="form-label">Family Name</label>
+                                        <input type="text" class="form-control" id="fatherLastName"
+                                            placeholder="Family Name">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="fatherAddress" class="form-label">Home Address</label>
+                                        <textarea class="form-control" id="fatherAddress" rows="3"></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="fatherMobile" class="form-label">Mobile Contact Number</label>
+                                        <input type="tel" class="form-control" id="fatherMobile">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="fatherEmail" class="form-label">Personal Email</label>
+                                        <input type="email" class="form-control" id="fatherEmail">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="fatherWorkAddress" class="form-label">Work Address</label>
+                                        <textarea class="form-control" id="fatherWorkAddress" rows="3"></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="fatherWorkNumber" class="form-label">Work Contact Number</label>
+                                        <input type="tel" class="form-control" id="fatherWorkNumber">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="fatherWorkEmail" class="form-label">Work Email</label>
+                                        <input type="email" class="form-control" id="fatherWorkEmail">
+                                    </div>
+                                </div>
+                                <div class="d-grid gap-2 mt-3">
+                                    <button type="button" class="btn btn-secondary btn-prev">Previous</button>
+                                    <button type="button" class="btn btn-brown">Next Step</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5: Medical Details & Immunisations -->
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h2 class="mb-0">Medical Details & Immunisations</h2>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="form-step">
+                            <!-- Allergies & Dietary Requirements -->
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="allergies" class="form-label">Allergies (if any)</label>
+                                        <textarea class="form-control" id="allergies" rows="3"
+                                            placeholder="Please provide details including medication taken"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="dietary" class="form-label">Special Dietary Requirements (if
+                                            any)</label>
+                                        <textarea class="form-control" id="dietary" rows="3"
+                                            placeholder="Please provide details including medication taken"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Medical Requirements -->
+                            <div class="mb-4">
+                                <label for="medicalRequirements" class="form-label">Medical Requirements (if
+                                    any)</label>
+                                <textarea class="form-control" id="medicalRequirements" rows="3"
+                                    placeholder="Please provide details including medication taken"></textarea>
+                            </div>
+
+                            <!-- Immunisations Table -->
+                            <h3 class="text-success">Immunisations</h3>
+                            <p>Provide details of all immunisations received (usually in child’s ‘red book’):</p>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped">
+                                    <thead class="table-success">
+                                        <tr>
+                                            <th scope="col">Name of Immunisation</th>
+                                            <th scope="col">Date Received</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>BCG</td>
+                                            <td><input type="date" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Diphtheria</td>
+                                            <td><input type="date" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>HIB</td>
+                                            <td><input type="date" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>MMR</td>
+                                            <td><input type="date" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Meningitis C</td>
+                                            <td><input type="date" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Poliomyelitis</td>
+                                            <td><input type="date" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tetanus</td>
+                                            <td><input type="date" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Whooping Cough</td>
+                                            <td><input type="date" class="form-control"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Procedures NOT allowed -->
+                            <div class="mb-4">
+                                <label for="proceduresNotAllowed" class="form-label">Procedures your child should NOT
+                                    undergo</label>
+                                <textarea class="form-control" id="proceduresNotAllowed" rows="3"
+                                    placeholder="Provide details if any"></textarea>
+                            </div>
+
+                            <!-- Other Immunisations -->
+                            <div class="mb-4">
+                                <label for="otherImmunisations" class="form-label">Other Immunisations</label>
+                                <textarea class="form-control" id="otherImmunisations" rows="3"
+                                    placeholder="Provide details of any other immunisations received"></textarea>
+                            </div>
+
+                            <!-- GP & Healthcare -->
+                            <h3 class="text-success">GP & Healthcare</h3>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="gpName" class="form-label">Name of GP</label>
+                                        <input type="text" class="form-control" id="gpName">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="gpSurgery" class="form-label">GP Surgery Address</label>
+                                        <textarea class="form-control" id="gpSurgery" rows="2"></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="gpContact" class="form-label">GP Contact Number</label>
+                                        <input type="tel" class="form-control" id="gpContact">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="healthVisitorName" class="form-label">Health Visitor Name</label>
+                                        <input type="text" class="form-control" id="healthVisitorName">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="healthVisitorContact" class="form-label">Health Visitor Contact
+                                            Number</label>
+                                        <input type="tel" class="form-control" id="healthVisitorContact">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="healthVisitorEmail" class="form-label">Health Visitor Email</label>
+                                        <input type="email" class="form-control" id="healthVisitorEmail">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="otherAgencies" class="form-label">Other Agencies Involved</label>
+                                        <textarea class="form-control" id="otherAgencies" rows="2"
+                                            placeholder="Provide details if applicable"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-grid gap-2 mt-3">
+                                <button type="button" class="btn btn-secondary btn-prev">Previous</button>
+                                <button type="button" class="btn btn-brown">Next Step</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 6: Permission Details & Emergency Contacts -->
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h2 class="mb-0">Permission Details & Emergency Contacts</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-step">
+                            <!-- Permission Details Table -->
+                            <h3 class="text-success mb-3">Permissions</h3>
+                            <p>To allow your child to participate safely in activities, please provide permissions
+                                below:</p>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped">
+                                    <thead class="table-success">
+                                        <tr>
+                                            <th scope="col">Activity / Protocol</th>
+                                            <th scope="col">Permission Given</th>
+                                            <th scope="col">Additional Information</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Emergency First Aid</td>
+                                            <td><input class="form-check-input" type="checkbox"></td>
+                                            <td><input type="text" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Calpol (see medication policy)</td>
+                                            <td><input class="form-check-input" type="checkbox"></td>
+                                            <td><input type="text" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Plasters</td>
+                                            <td><input class="form-check-input" type="checkbox"></td>
+                                            <td><input type="text" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Vaseline</td>
+                                            <td><input class="form-check-input" type="checkbox"></td>
+                                            <td><input type="text" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Shaving Foam (activities)</td>
+                                            <td><input class="form-check-input" type="checkbox"></td>
+                                            <td><input type="text" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hair Check</td>
+                                            <td><input class="form-check-input" type="checkbox"></td>
+                                            <td><input type="text" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Photographs</td>
+                                            <td><input class="form-check-input" type="checkbox"></td>
+                                            <td><input type="text" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Facebook (see social media policy)</td>
+                                            <td><input class="form-check-input" type="checkbox"></td>
+                                            <td><input type="text" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Outings</td>
+                                            <td><input class="form-check-input" type="checkbox"></td>
+                                            <td><input type="text" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Face Paint</td>
+                                            <td><input class="form-check-input" type="checkbox"></td>
+                                            <td><input type="text" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sharing child’s name with other parents</td>
+                                            <td><input class="form-check-input" type="checkbox"></td>
+                                            <td><input type="text" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Display child’s name within nursery</td>
+                                            <td><input class="form-check-input" type="checkbox"></td>
+                                            <td><input type="text" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Contact with guinea pigs</td>
+                                            <td><input class="form-check-input" type="checkbox"></td>
+                                            <td><input type="text" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Toothbrushing programme</td>
+                                            <td><input class="form-check-input" type="checkbox"></td>
+                                            <td><input type="text" class="form-control"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Emergency Contacts -->
+                            <h3 class="text-success mt-4">Emergency Contacts</h3>
+                            <p>Provide at least one alternative contact if main carers are unavailable:</p>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="emergencyName1" class="form-label">Contact Name</label>
+                                        <input type="text" class="form-control" id="emergencyName1">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="emergencyPhone1" class="form-label">Contact Number</label>
+                                        <input type="tel" class="form-control" id="emergencyPhone1">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="emergencyRelation1" class="form-label">Relationship to Child</label>
+                                        <input type="text" class="form-control" id="emergencyRelation1">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="emergencyName2" class="form-label">Contact Name</label>
+                                        <input type="text" class="form-control" id="emergencyName2">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="emergencyPhone2" class="form-label">Contact Number</label>
+                                        <input type="tel" class="form-control" id="emergencyPhone2">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="emergencyRelation2" class="form-label">Relationship to Child</label>
+                                        <input type="text" class="form-control" id="emergencyRelation2">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-grid gap-2 mt-3">
+                                <button type="button" class="btn btn-secondary btn-prev">Previous</button>
+                                <button type="button" class="btn btn-brown">Next Step</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 7: Payment Fees -->
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h2 class="mb-0">Payment Fees</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-step">
+                            <p>Please state the full name of who will be responsible for the payment fees.</p>
+
+                            <div class="row g-4">
+                                <!-- Contact 1 -->
+                                <div class="col-md-6">
+                                    <h3 class="text-success">Contact 1</h3>
+                                    <div class="mb-3">
+                                        <label for="payee1Name" class="form-label">Full Name</label>
+                                        <input type="text" class="form-control" id="payee1Name">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="payee1Phone" class="form-label">Contact Number</label>
+                                        <input type="tel" class="form-control" id="payee1Phone">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="payee1Email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="payee1Email">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="payee1Address" class="form-label">Home Address (including
+                                            postcode)</label>
+                                        <textarea class="form-control" id="payee1Address" rows="3"></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="payee1Relation" class="form-label">Relationship to Child</label>
+                                        <input type="text" class="form-control" id="payee1Relation">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="payee1Password" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="payee1Password"
+                                            aria-describedby="passwordHelp1">
+                                        <div id="passwordHelp1" class="form-text">Must be 8-20 characters long.</div>
+                                    </div>
+                                </div>
+
+                                <!-- Contact 2 -->
+                                <div class="col-md-6">
+                                    <h3 class="text-success">Contact 2</h3>
+                                    <div class="mb-3">
+                                        <label for="payee2Name" class="form-label">Full Name</label>
+                                        <input type="text" class="form-control" id="payee2Name">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="payee2Phone" class="form-label">Contact Number</label>
+                                        <input type="tel" class="form-control" id="payee2Phone">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="payee2Email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="payee2Email">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="payee2Address" class="form-label">Home Address (including
+                                            postcode)</label>
+                                        <textarea class="form-control" id="payee2Address" rows="3"></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="payee2Relation" class="form-label">Relationship to Child</label>
+                                        <input type="text" class="form-control" id="payee2Relation">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="payee2Password" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="payee2Password"
+                                            aria-describedby="passwordHelp2">
+                                        <div id="passwordHelp2" class="form-text">Must be 8-20 characters long.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-grid gap-2 mt-3">
+                                <button type="button" class="btn btn-secondary btn-prev">Previous</button>
+                                <button type="button" class="btn btn-brown">Next Step</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 8: Agreement & signatures-->
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h2 class="mb-0">Agreement & Signatures</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-step">
+                            <h3>Additional requirements:</h3>
+                            <p>At Nanny Janes Nursery, it’s important that all children can engage in a variety of
+                                activities, both inside and outside
+                                and that they’re suitably dressed and protected from the weather etc.
+                                To enable all our children to participate in all activities and educational
+                                opportunities, we ask all Parents and Carers
+                                to supply the following equipment for their child/ children. They will remain at nursery
+                                so that the children can
+                                access them whenever required and our staff will advise you of any replacements that may
+                                be required at any time:
+                                Please provide the following:
+                            <ul>
+                                <li> A pair of Wellington boots</li>
+                                <li>A Sun Hat</li>
+                                <li>Sun Cream (During Summer Months only. Our staff team will ensure that they request
+                                    Sun Cream when it is
+                                    approaching the time that it will be required).</li>
+                            </ul>
+                            All items will be stored accordingly and labelled with each Child’s name.
+                            All children should always have a warm coat when required and sensible footwear to enable
+                            them to access the
+                            outdoor area safely.
+                            If you have any queries regarding the provision of items for your child, please don’t
+                            hesitate to speak with the
+                            Nursery Manager</p>
+                            <br>
+
+                            <p>I agree to abide by the terms and conditions and policies and procedures of Wonder Years
+                                Inspirational Day Care Centre. I understand that the policies and procedures are
+                                available to me at any time.</p>
+
+                            <!-- Parent Signature -->
+                            <div class="mb-3">
+                                <label for="parentSignature" class="form-label">Parent/Carer Signature</label>
+                                <input type="text" class="form-control" id="parentSignature" placeholder="Signed">
+                            </div>
+                            <div class="mb-3">
+                                <label for="parentDate" class="form-label">Date</label>
+                                <input type="date" class="form-control" id="parentDate">
+                            </div>
+                            <div class="mb-3">
+                                <label for="parentPrint" class="form-label">Print Name</label>
+                                <input type="text" class="form-control" id="parentPrint">
+                            </div>
+
+                            <hr>
+
+                            <!-- Nursery Manager Signature -->
+                            <div class="mb-3">
+                                <label for="managerSignature" class="form-label">Nursery Manager Signature</label>
+                                <input type="text" class="form-control" id="managerSignature" placeholder="Signed">
+                            </div>
+                            <div class="mb-3">
+                                <label for="managerDate" class="form-label">Date</label>
+                                <input type="date" class="form-control" id="managerDate">
+                            </div>
+                            <div class="mb-3">
+                                <label for="managerPrint" class="form-label">Print Name</label>
+                                <input type="text" class="form-control" id="managerPrint">
+                            </div>
+                            <div class="d-grid gap-2 mt-3">
+                                <button type="button" class="btn btn-secondary btn-prev">Previous</button>
+                                <button type="button" class="btn btn-brown">Next Step</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review & Submit Section -->
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h2 class="mb-0">Review & Submit</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>Please review all information you have entered. Make sure every section is complete and
+                            accurate before submitting.</p>
+
+                        <!-- Confirmation checkbox -->
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="confirmInfo" required>
+                            <label class="form-check-label" for="confirmInfo">
+                                I confirm that all information provided is accurate and complete.
+                            </label>
+                        </div>
+
+                        <!-- Final submit button -->
+                        <button type="submit" class="btn btn-success btn-lg w-100">
+                            Submit Form
+                        </button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>

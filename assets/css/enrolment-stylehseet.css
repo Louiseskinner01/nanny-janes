@@ -1,0 +1,11 @@
+.btn-brown {
+    background-color: #8B6D5C;
+    color: white;
+  }
+  .btn-brown:hover {
+    background-color: #A88B7C;
+  }
+  .card-header {
+    background-color: #A8D5BA !important;
+    color: #4A4A4A !important;
+  }

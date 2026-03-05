@@ -1,12 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Bpmf+Iansui&display=swap');
+
+:root{
+--primary-font: "Bpmf Iansui", cursive;
+}
+
+
+
+
+
 .container {
     background-color: rgb(253, 249, 252);
     width: 80%;
-    margin: auto;
+    position: relative;
     border-radius: 30px;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    margin: 30px 0;
+    padding: 10px 0px;
+
 }
 
 .container h1 {
@@ -21,7 +30,8 @@
 
 
 .navbar {
-    background-color: rgb(243, 249, 255) ;
+    background-color: white ;
+    font-family: var(--primary-font);
 }
 
 footer{
@@ -46,8 +56,15 @@ li{
     
 }
 
+
+a.nav-link {
+    color: rgb(80, 184, 28);
+    font-weight: bold;
+    margin: 0px 5px;
+    font-size: 15px;
+}
 .nav-link.active {
-    color: green !important;
+    color: rgb(139, 75, 26) !important;
 }
 
 #enrolement-img {
@@ -56,8 +73,8 @@ li{
     border-radius: 5px;
 }
 
-enrolement-styling {
-display: inline-flex;
+#enrolement-img {
+    width: 70%
 }
 
 #form-contact label{
@@ -69,4 +86,39 @@ display: inline-flex;
     font-style: italic;
     font-size: smaller;
     margin-left: 5px;
+}
+
+iframe {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+@media (min-width: 890px){
+    a.nav-link {
+        font-size: 20px;
+}
+}
+
+@media (min-width: 1000px){
+    a.nav-link {
+        font-size: 24px;
+        
+}
+}
+
+@media (min-width: 1140px){
+    a.nav-link {
+        font-size: 28px;
+        margin: 0px 7px;
+      
+}
+}
+
+@media (min-width: 2000px){
+    a.nav-link {
+        font-size: 40px;
+        margin: 0px 10px;
+        
+}
 }
