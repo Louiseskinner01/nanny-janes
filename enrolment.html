@@ -14,10 +14,6 @@
     <link rel="stylesheet" href="assets/css/enrolment-stylehseet.css">
 </head>
 
-
-
-
-
 <body>
     <header>
         <nav class="navbar navbar-expand-md navbar-light">
@@ -69,19 +65,19 @@
                 <!-- Step 1: Child's Personal Information -->
                 <div class="card mb-4 shadow-sm">
                     <div class="card-header bg-success text-white">
-                        <h2 class="mb-0">Child's Personal Information</h2>
+                        <h2 class="mb-0" id="h2-enrol">Child's Personal Information</h2>
                     </div>
                     <div class="card-body">
 
                         <div class="form-step">
                             <div class="row mb-3">
                                 <div class="col-md-6 mb-3">
-                                    <label for="childFirstName" class="form-label">First Name</label>
+                                    <label for="childFirstName" class="form-label">First Name<span class="required">*</span></label>
                                     <input type="text" class="form-control" id="childFirstName"
                                         placeholder="First name">
                                 </div>
                                 <div class="col-md-6 mb-3">
-                                    <label for="childLastName" class="form-label">Family Name</label>
+                                    <label for="childLastName" class="form-label">Family Name<span class="required">*</span></label>
                                     <input type="text" class="form-control" id="childLastName"
                                         placeholder="Family name">
                                 </div>
@@ -90,17 +86,17 @@
                             <div class="row mb-3">
                                 <div class="col-md-6 mb-3">
                                     <label for="childMiddleName" class="form-label">Middle Name(s)</label>
-                                    <input type="text" class="form-control" id="childMiddleName"
+                                    <input type="text" class="form-control optional-info" id="childMiddleName"
                                         placeholder="Middle name(s)">
                                 </div>
                                 <div class="col-md-6 mb-3">
-                                    <label for="childDOB" class="form-label">Date of Birth</label>
+                                    <label for="childDOB" class="form-label">Date of Birth<span class="required">*</span></label>
                                     <input type="date" class="form-control" id="childDOB">
                                 </div>
                             </div>
 
                             <div class="mb-3">
-                                <label for="childAddress" class="form-label">Home Address (including postcode)</label>
+                                <label for="childAddress" class="form-label">Home Address (including postcode)<span class="required">*</span></label>
                                 <textarea class="form-control" id="childAddress" rows="3"
                                     placeholder="Enter full address"></textarea>
                             </div>
@@ -116,14 +112,14 @@
                 <!-- Step 2: Religion & Ethnicity -->
                 <div class="card mb-4 shadow-sm">
                     <div class="card-header bg-success text-white">
-                        <h2 class="mb-0">Religion & Ethnicity</h2>
+                        <h2 class="mb-0" id="h2-enrol">Religion & Ethnicity</h2>
                     </div>
                     <div class="card-body">
 
                         <div class="form-step">
                             <!-- Religion -->
                             <div class="mb-3">
-                                <label for="childReligion" class="form-label"><strong>Religion</strong></label>
+                                <label for="childReligion" class="form-label"><strong>Religion<span class="required">*</span></strong></label>
                                 <select class="form-select" id="childReligion" multiple>
                                     <option>No Religion / No Belief</option>
                                     <option>Atheist</option>
@@ -140,7 +136,7 @@
 
                             <!-- Ethnicity -->
                             <div class="mb-3">
-                                <label class="form-label"><strong>Ethnicity</strong></label>
+                                <label class="form-label"><strong>Ethnicity<span class="required">*</span></strong></label>
                                 <div class="row">
                                     <!-- Asian -->
                                     <div class="col-md-6 mb-3">
@@ -229,7 +225,7 @@
 
                             <!-- Home language -->
                             <div class="mb-3">
-                                <label for="homeLanguage" class="form-label"><strong>Home Language</strong></label>
+                                <label for="homeLanguage" class="form-label"><strong>Home Language<span class="required">*</span></strong></label>
                                 <input type="text" class="form-control" id="homeLanguage"
                                     placeholder="Language spoken at home">
                             </div>
@@ -246,7 +242,7 @@
                 <!-- Step 3: Nursery Booking Sessions -->
                 <div class="card mb-4 shadow-sm">
                     <div class="card-header bg-success text-white">
-                        <h2 class="mb-0">Nursery Booking Sessions</h2>
+                        <h2 class="mb-0" id="h2-enrol">Nursery Booking Sessions</h2>
                     </div>
                     <div class="card-body">
                         <div class="form-step">
@@ -259,75 +255,75 @@
                             <div class="row g-3">
                                 <!-- AM Sessions -->
                                 <div class="col-md-4">
-                                    <h5 class="text-success">AM Sessions</h5>
+                                    <h5>AM Sessions</h5>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="amMon">
+                                        <input class="form-check-input" type="checkbox" name="sessions" id="amMon">
                                         <label class="form-check-label" for="amMon">Monday</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="amTue">
+                                        <input class="form-check-input" type="checkbox" name="sessions" id="amTue">
                                         <label class="form-check-label" for="amTue">Tuesday</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="amWed">
+                                        <input class="form-check-input" type="checkbox" name="sessions" id="amWed">
                                         <label class="form-check-label" for="amWed">Wednesday</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="amThu">
+                                        <input class="form-check-input" type="checkbox" name="sessions" id="amThu">
                                         <label class="form-check-label" for="amThu">Thursday</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="amFri">
+                                        <input class="form-check-input" type="checkbox" name="sessions" id="amFri">
                                         <label class="form-check-label" for="amFri">Friday</label>
                                     </div>
                                 </div>
 
                                 <!-- PM Sessions -->
                                 <div class="col-md-4">
-                                    <h5 class="text-success">PM Sessions</h5>
+                                    <h5>PM Sessions</h5>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="pmMon">
+                                        <input class="form-check-input" type="checkbox" name="sessions" id="pmMon">
                                         <label class="form-check-label" for="pmMon">Monday</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="pmTue">
+                                        <input class="form-check-input" type="checkbox" name="sessions" id="pmTue">
                                         <label class="form-check-label" for="pmTue">Tuesday</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="pmWed">
+                                        <input class="form-check-input" type="checkbox" name="sessions" id="pmWed">
                                         <label class="form-check-label" for="pmWed">Wednesday</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="pmThu">
+                                        <input class="form-check-input" type="checkbox" name="sessions" id="pmThu">
                                         <label class="form-check-label" for="pmThu">Thursday</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="pmFri">
+                                        <input class="form-check-input" type="checkbox" name="sessions" id="pmFri">
                                         <label class="form-check-label" for="pmFri">Friday</label>
                                     </div>
                                 </div>
 
                                 <!-- All-Day Sessions -->
                                 <div class="col-md-4">
-                                    <h5 class="text-success">All-Day (A/D) Sessions</h5>
+                                    <h5>All-Day (A/D) Sessions</h5>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="adMon">
+                                        <input class="form-check-input" type="checkbox" name="sessions" id="adMon">
                                         <label class="form-check-label" for="adMon">Monday</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="adTue">
+                                        <input class="form-check-input" type="checkbox" name="sessions" id="adTue">
                                         <label class="form-check-label" for="adTue">Tuesday</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="adWed">
+                                        <input class="form-check-input" type="checkbox" name="sessions" id="adWed">
                                         <label class="form-check-label" for="adWed">Wednesday</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="adThu">
+                                        <input class="form-check-input" type="checkbox" name="sessions" id="adThu">
                                         <label class="form-check-label" for="adThu">Thursday</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="adFri">
+                                        <input class="form-check-input" type="checkbox" name="sessions" id="adFri">
                                         <label class="form-check-label" for="adFri">Friday</label>
                                     </div>
                                 </div>
@@ -336,35 +332,35 @@
 
                             <!-- Optional Top-Up -->
                             <div class="mt-3">
-                                <h5 class="text-success">Optional 7am-8am Top-Up</h5>
+                                <h5>Optional 7am-8am Top-Up</h5>
                                 <div class="row g-2">
                                     <div class="col-md-2 col-6">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="topupMon">
+                                            <input class="form-check-input" type="checkbox" name="topup" id="topupMon">
                                             <label class="form-check-label" for="topupMon">Monday</label>
                                         </div>
                                     </div>
                                     <div class="col-md-2 col-6">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="topupTue">
+                                            <input class="form-check-input" type="checkbox" name="topup" id="topupTue">
                                             <label class="form-check-label" for="topupTue">Tuesday</label>
                                         </div>
                                     </div>
                                     <div class="col-md-2 col-6">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="topupWed">
+                                            <input class="form-check-input" type="checkbox" name="topup" id="topupWed">
                                             <label class="form-check-label" for="topupWed">Wednesday</label>
                                         </div>
                                     </div>
                                     <div class="col-md-2 col-6">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="topupThu">
+                                            <input class="form-check-input" type="checkbox" name="topup" id="topupThu">
                                             <label class="form-check-label" for="topupThu">Thursday</label>
                                         </div>
                                     </div>
                                     <div class="col-md-2 col-6">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="topupFri">
+                                            <input class="form-check-input" type="checkbox" name="topup" id="topupFri">
                                             <label class="form-check-label" for="topupFri">Friday</label>
                                         </div>
                                     </div>
@@ -382,90 +378,113 @@
                 <!-- Step 4: Parent / Carer Information -->
                 <div class="card mb-4 shadow-sm">
                     <div class="card-header bg-success text-white">
-                        <h2 class="mb-0">Parent / Carer Information</h2>
+                        <h2 class="mb-0" id="h2-enrol">Parent / Carer Information</h2>
                     </div>
                     <div class="card-body">
 
                         <div class="form-step">
                             <div class="row g-4">
 
-                                <!-- Mother / Carer -->
+                                <!-- Parent 1 / Carer -->
                                 <div class="col-md-6">
-                                    <h3 class="text-success">Mother / Carer</h3>
+                                    <h3 class="text-success">Parent / Carer</h3>
+                                    
                                     <div class="mb-3">
-                                        <label for="motherFirstName" class="form-label">First Name</label>
-                                        <input type="text" class="form-control" id="motherFirstName"
+                                        <label for="parent1Relation" class="form-label">Relationship to child e.g Mother, Father, Carer<span class="required">*</span></label>
+                                        <input type="text" class="form-control" id="parent1Relation"
+                                            placeholder="Parent 1 Relations">
+                                        </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="parent1FirstName" class="form-label">First Name<span class="required">*</span></label>
+                                        <input type="text" class="form-control" id="parent1FirstName"
                                             placeholder="First Name">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="motherLastName" class="form-label">Family Name</label>
-                                        <input type="text" class="form-control" id="motherLastName"
+                                        <label for="parent1LastName" class="form-label">Family Name<span class="required">*</span></label>
+                                        <input type="text" class="form-control" id="parent1LastName"
                                             placeholder="Family Name">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="motherAddress" class="form-label">Home Address</label>
-                                        <textarea class="form-control" id="motherAddress" rows="3"></textarea>
+                                        <label for="parent1Address" class="form-label">Home Address<span class="required">*</span></label>
+                                        <textarea class="form-control" id="parent1Address" rows="3"></textarea>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="motherMobile" class="form-label">Mobile Contact Number</label>
-                                        <input type="tel" class="form-control" id="motherMobile">
+                                        <label for="parent1Mobile" class="form-label">Mobile Contact Number<span class="required">*</span></label>
+                                        <input type="tel" class="form-control" id="parent1Mobile">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="motherEmail" class="form-label">Personal Email</label>
-                                        <input type="email" class="form-control" id="motherEmail">
+                                        <label for="parent1Email" class="form-label">Personal Email<span class="required">*</span></label>
+                                        <input type="email" class="form-control" id="parent1Email">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="motherWorkAddress" class="form-label">Work Address</label>
-                                        <textarea class="form-control" id="motherWorkAddress" rows="3"></textarea>
+                                        <label for="parent1WorkAddress" class="form-label">Work Address</label>
+                                        <textarea class="form-control optional-info" id="parent1WorkAddress" rows="3"></textarea>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="motherWorkNumber" class="form-label">Work Contact Number</label>
-                                        <input type="tel" class="form-control" id="motherWorkNumber">
+                                        <label for="parent1WorkNumber" class="form-label">Work Contact Number</label>
+                                        <input type="tel" class="form-control optional-info" id="parent1WorkNumber">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="motherWorkEmail" class="form-label">Work Email</label>
-                                        <input type="email" class="form-control" id="motherWorkEmail">
+                                        <label for="parent1WorkEmail" class="form-label">Work Email</label>
+                                        <input type="email" class="form-control optional-info" id="parent1WorkEmail">
                                     </div>
                                 </div>
 
-                                <!-- Father / Carer -->
+                                <!-- Parent 2 / Carer -->
                                 <div class="col-md-6">
-                                    <h3 class="text-success">Father / Carer</h3>
+
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" id="parent2-form">
+                                        <label class="form-check-label" for="parent2-form">
+                                            Please tick if your child has only 1 parent/Carer.
+                                        </label>
+                                    </div>
+
+                                    <h3 class="text-success">Parent / Carer</h3>
+                                    
                                     <div class="mb-3">
-                                        <label for="fatherFirstName" class="form-label">First Name</label>
-                                        <input type="text" class="form-control" id="fatherFirstName"
+                                    <label for="parent2Relation" class="form-label">Relationship to child e.g Mother, Father, Carer<span class="required">*</span></label>
+                                    <input type="text" class="form-control parent2-info" id="parent2Relation"
+                                        placeholder="Parent 2 Relations">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="parent2FirstName" class="form-label">First Name<span class="required">*</span></label>
+                                        <input type="text" class="form-control parent2-info" id="parent2FirstName"
                                             placeholder="First Name">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="fatherLastName" class="form-label">Family Name</label>
-                                        <input type="text" class="form-control" id="fatherLastName"
+                                        <label for="parent2LastName" class="form-label">Family Name<span class="required">*</span></label>
+                                        <input type="text" class="form-control parent2-info" id="parent2LastName"
                                             placeholder="Family Name">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="fatherAddress" class="form-label">Home Address</label>
-                                        <textarea class="form-control" id="fatherAddress" rows="3"></textarea>
+                                        <label for="parent2Address" class="form-label">Home Address<span class="required">*</span></label>
+                                        <textarea class="form-control parent2-info" id="parent2Address" rows="3"></textarea>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="fatherMobile" class="form-label">Mobile Contact Number</label>
-                                        <input type="tel" class="form-control" id="fatherMobile">
+                                        <label for="parent2Mobile" class="form-label">Mobile Contact Number<span class="required">*</span></label>
+                                        <input type="tel" class="form-control parent2-info" id="parent2Mobile">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="fatherEmail" class="form-label">Personal Email</label>
-                                        <input type="email" class="form-control" id="fatherEmail">
+                                        <label for="parent2Email" class="form-label">Personal Email<span class="required">*</span></label>
+                                        <input type="email" class="form-control parent2-info" id="parent2Email">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="fatherWorkAddress" class="form-label">Work Address</label>
-                                        <textarea class="form-control" id="fatherWorkAddress" rows="3"></textarea>
+                                        <label for="parent2WorkAddress" class="form-label">Work Address</label>
+                                        <textarea class="form-control parent2-info optional-info" id="parent2WorkAddress" rows="3"></textarea>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="fatherWorkNumber" class="form-label">Work Contact Number</label>
-                                        <input type="tel" class="form-control" id="fatherWorkNumber">
+                                        <label for="parent2WorkNumber" class="form-label">Work Contact Number</label>
+                                        <input type="tel" class="form-control parent2-info optional-info" id="parent2WorkNumber">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="fatherWorkEmail" class="form-label">Work Email</label>
-                                        <input type="email" class="form-control" id="fatherWorkEmail">
+                                        <label for="parent2WorkEmail" class="form-label">Work Email</label>
+                                        <input type="email" class="form-control parent2-info optional-info" id="parent2WorkEmail">
                                     </div>
                                 </div>
+
                                 <div class="d-grid gap-2 mt-3">
                                     <button type="button" class="btn btn-secondary btn-prev">Previous</button>
                                     <button type="button" class="btn btn-brown btn-next">Next Step</button>
@@ -479,7 +498,7 @@
                 <!-- Step 5: Medical Details & Immunisations -->
                 <div class="card mb-4 shadow-sm">
                     <div class="card-header bg-success text-white">
-                        <h2 class="mb-0">Medical Details & Immunisations</h2>
+                        <h2 class="mb-0" id="h2-enrol">Medical Details & Immunisations</h2>
                     </div>
                     <div class="card-body">
 
@@ -488,32 +507,40 @@
                             <div class="row g-4 mb-4">
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="allergies" class="form-label">Allergies (if any)</label>
-                                        <textarea class="form-control" id="allergies" rows="3"
-                                            placeholder="Please provide details including medication taken"></textarea>
+                                        <label for="allergies" class="form-label">Allergies (leave blank if this doesn't apply).</label>
+                                        <textarea class="form-control optional-info" id="allergies" rows="3"
+                                            placeholder="Please provide details including medication taken if applicable"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="dietary" class="form-label">Special Dietary Requirements (if
-                                            any)</label>
-                                        <textarea class="form-control" id="dietary" rows="3"
-                                            placeholder="Please provide details including medication taken"></textarea>
+                                        <label for="dietary" class="form-label">Special Dietary Requirements (leave blank if this doesn't apply
+                                            ).</label>
+                                        <textarea class="form-control optional-info" id="dietary" rows="3"
+                                            placeholder="Please provide details including medication taken if applicable"></textarea>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Medical Requirements -->
                             <div class="mb-4">
-                                <label for="medicalRequirements" class="form-label">Medical Requirements (if
-                                    any)</label>
-                                <textarea class="form-control" id="medicalRequirements" rows="3"
-                                    placeholder="Please provide details including medication taken"></textarea>
+                                <label for="medicalRequirements" class="form-label">Medical Requirements (leave blank if this doesn't apply)
+</label>
+                                <textarea class="form-control optional-info" id="medicalRequirements" rows="3"
+                                    placeholder="Please provide details including medication taken if applicable"></textarea>
                             </div>
 
                             <!-- Immunisations Table -->
                             <h3 class="text-success">Immunisations</h3>
-                            <p>Provide details of all immunisations received (usually in child’s ‘red book’):</p>
+                            <p>Provide details of all immunisations received (usually in child’s ‘red book’). If your child is not immunised please tick the NONE box:</p>
+                            
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="noImmunisations">
+                                <label class="form-check-label" for="noImmunisations">
+                                    My child has not received any immunisations.
+                                </label>
+                            </div>
+
                             <div class="table-responsive">
                                 <table class="table table-bordered table-striped">
                                     <thead class="table-success">
@@ -525,35 +552,35 @@
                                     <tbody>
                                         <tr>
                                             <td>BCG</td>
-                                            <td><input type="date" class="form-control"></td>
+                                            <td><input type="date" class="form-control immun-date"></td>
                                         </tr>
                                         <tr>
                                             <td>Diphtheria</td>
-                                            <td><input type="date" class="form-control"></td>
+                                            <td><input type="date" class="form-control immun-date"></td>
                                         </tr>
                                         <tr>
                                             <td>HIB</td>
-                                            <td><input type="date" class="form-control"></td>
+                                            <td><input type="date" class="form-control immun-date"></td>
                                         </tr>
                                         <tr>
                                             <td>MMR</td>
-                                            <td><input type="date" class="form-control"></td>
+                                            <td><input type="date" class="form-control immun-date"></td>
                                         </tr>
                                         <tr>
                                             <td>Meningitis C</td>
-                                            <td><input type="date" class="form-control"></td>
+                                            <td><input type="date" class="form-control immun-date"></td>
                                         </tr>
                                         <tr>
                                             <td>Poliomyelitis</td>
-                                            <td><input type="date" class="form-control"></td>
+                                            <td><input type="date" class="form-control immun-date"></td>
                                         </tr>
                                         <tr>
                                             <td>Tetanus</td>
-                                            <td><input type="date" class="form-control"></td>
+                                            <td><input type="date" class="form-control immun-date"></td>
                                         </tr>
                                         <tr>
                                             <td>Whooping Cough</td>
-                                            <td><input type="date" class="form-control"></td>
+                                            <td><input type="date" class="form-control immun-date"></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -562,15 +589,15 @@
                             <!-- Procedures NOT allowed -->
                             <div class="mb-4">
                                 <label for="proceduresNotAllowed" class="form-label">Procedures your child should NOT
-                                    undergo</label>
-                                <textarea class="form-control" id="proceduresNotAllowed" rows="3"
+                                    undergo (leave blank if this doesn't apply).</label>
+                                <textarea class="form-control optional-info" id="proceduresNotAllowed" rows="3"
                                     placeholder="Provide details if any"></textarea>
                             </div>
 
                             <!-- Other Immunisations -->
                             <div class="mb-4">
-                                <label for="otherImmunisations" class="form-label">Other Immunisations</label>
-                                <textarea class="form-control" id="otherImmunisations" rows="3"
+                                <label for="otherImmunisations" class="form-label">Other Immunisations (leave blank if this doesn't apply).</label>
+                                <textarea class="form-control optional-info" id="otherImmunisations" rows="3"
                                     placeholder="Provide details of any other immunisations received"></textarea>
                             </div>
 
@@ -583,31 +610,31 @@
                                         <input type="text" class="form-control" id="gpName">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="gpSurgery" class="form-label">GP Surgery Address</label>
+                                        <label for="gpSurgery" class="form-label">GP Surgery Address<span class="required">*</span></label>
                                         <textarea class="form-control" id="gpSurgery" rows="2"></textarea>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="gpContact" class="form-label">GP Contact Number</label>
+                                        <label for="gpContact" class="form-label">GP Contact Number<span class="required">*</span></label>
                                         <input type="tel" class="form-control" id="gpContact">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="healthVisitorName" class="form-label">Health Visitor Name</label>
-                                        <input type="text" class="form-control" id="healthVisitorName">
+                                        <input type="text" class="form-control optional-info" id="healthVisitorName">
                                     </div>
                                     <div class="mb-3">
                                         <label for="healthVisitorContact" class="form-label">Health Visitor Contact
                                             Number</label>
-                                        <input type="tel" class="form-control" id="healthVisitorContact">
+                                        <input type="tel" class="form-control optional-info" id="healthVisitorContact">
                                     </div>
                                     <div class="mb-3">
                                         <label for="healthVisitorEmail" class="form-label">Health Visitor Email</label>
-                                        <input type="email" class="form-control" id="healthVisitorEmail">
+                                        <input type="email" class="form-control optional-info" id="healthVisitorEmail">
                                     </div>
                                     <div class="mb-3">
                                         <label for="otherAgencies" class="form-label">Other Agencies Involved</label>
-                                        <textarea class="form-control" id="otherAgencies" rows="2"
+                                        <textarea class="form-control optional-info" id="otherAgencies" rows="2"
                                             placeholder="Provide details if applicable"></textarea>
                                     </div>
                                 </div>
@@ -623,7 +650,7 @@
                 <!-- Step 6: Permission Details & Emergency Contacts -->
                 <div class="card mb-4 shadow-sm">
                     <div class="card-header bg-success text-white">
-                        <h2 class="mb-0">Permission Details & Emergency Contacts</h2>
+                        <h2 class="mb-0" id="h2-enrol">Permission Details & Emergency Contacts</h2>
                     </div>
                     <div class="card-body">
                         <div class="form-step">
@@ -636,7 +663,7 @@
                                     <thead class="table-success">
                                         <tr>
                                             <th scope="col">Activity / Protocol</th>
-                                            <th scope="col">Permission Given</th>
+                                            <th scope="col">Permission Given<span class="required">*</span></th>
                                             <th scope="col">Additional Information</th>
                                         </tr>
                                     </thead>
@@ -644,72 +671,72 @@
                                         <tr>
                                             <td>Emergency First Aid</td>
                                             <td><input class="form-check-input" type="checkbox"></td>
-                                            <td><input type="text" class="form-control"></td>
+                                            <td><input type="text" class="form-control optional-info"></td>
                                         </tr>
                                         <tr>
                                             <td>Calpol (see medication policy)</td>
                                             <td><input class="form-check-input" type="checkbox"></td>
-                                            <td><input type="text" class="form-control"></td>
+                                            <td><input type="text" class="form-control optional-info"></td>
                                         </tr>
                                         <tr>
                                             <td>Plasters</td>
                                             <td><input class="form-check-input" type="checkbox"></td>
-                                            <td><input type="text" class="form-control"></td>
+                                            <td><input type="text" class="form-control optional-info"></td>
                                         </tr>
                                         <tr>
                                             <td>Vaseline</td>
                                             <td><input class="form-check-input" type="checkbox"></td>
-                                            <td><input type="text" class="form-control"></td>
+                                            <td><input type="text" class="form-control optional-info"></td>
                                         </tr>
                                         <tr>
                                             <td>Shaving Foam (activities)</td>
                                             <td><input class="form-check-input" type="checkbox"></td>
-                                            <td><input type="text" class="form-control"></td>
+                                            <td><input type="text" class="form-control optional-info"></td>
                                         </tr>
                                         <tr>
                                             <td>Hair Check</td>
                                             <td><input class="form-check-input" type="checkbox"></td>
-                                            <td><input type="text" class="form-control"></td>
+                                            <td><input type="text" class="form-control optional-info"></td>
                                         </tr>
                                         <tr>
                                             <td>Photographs</td>
                                             <td><input class="form-check-input" type="checkbox"></td>
-                                            <td><input type="text" class="form-control"></td>
+                                            <td><input type="text" class="form-control optional-info"></td>
                                         </tr>
                                         <tr>
                                             <td>Facebook (see social media policy)</td>
                                             <td><input class="form-check-input" type="checkbox"></td>
-                                            <td><input type="text" class="form-control"></td>
+                                            <td><input type="text" class="form-control optional-info"></td>
                                         </tr>
                                         <tr>
                                             <td>Outings</td>
                                             <td><input class="form-check-input" type="checkbox"></td>
-                                            <td><input type="text" class="form-control"></td>
+                                            <td><input type="text" class="form-control optional-info"></td>
                                         </tr>
                                         <tr>
                                             <td>Face Paint</td>
                                             <td><input class="form-check-input" type="checkbox"></td>
-                                            <td><input type="text" class="form-control"></td>
+                                            <td><input type="text" class="form-control optional-info"></td>
                                         </tr>
                                         <tr>
                                             <td>Sharing child’s name with other parents</td>
                                             <td><input class="form-check-input" type="checkbox"></td>
-                                            <td><input type="text" class="form-control"></td>
+                                            <td><input type="text" class="form-control optional-info"></td>
                                         </tr>
                                         <tr>
                                             <td>Display child’s name within nursery</td>
                                             <td><input class="form-check-input" type="checkbox"></td>
-                                            <td><input type="text" class="form-control"></td>
+                                            <td><input type="text" class="form-control optional-info"></td>
                                         </tr>
                                         <tr>
                                             <td>Contact with guinea pigs</td>
                                             <td><input class="form-check-input" type="checkbox"></td>
-                                            <td><input type="text" class="form-control"></td>
+                                            <td><input type="text" class="form-control optional-info"></td>
                                         </tr>
                                         <tr>
                                             <td>Toothbrushing programme</td>
                                             <td><input class="form-check-input" type="checkbox"></td>
-                                            <td><input type="text" class="form-control"></td>
+                                            <td><input type="text" class="form-control optional-info"></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -721,29 +748,29 @@
                             <div class="row g-4">
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="emergencyName1" class="form-label">Contact Name</label>
+                                        <label for="emergencyName1" class="form-label">Contact Name<span class="required">*</span></label>
                                         <input type="text" class="form-control" id="emergencyName1">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="emergencyPhone1" class="form-label">Contact Number</label>
+                                        <label for="emergencyPhone1" class="form-label">Contact Number<span class="required">*</span></label>
                                         <input type="tel" class="form-control" id="emergencyPhone1">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="emergencyRelation1" class="form-label">Relationship to Child</label>
+                                        <label for="emergencyRelation1" class="form-label">Relationship to Child<span class="required">*</span></label>
                                         <input type="text" class="form-control" id="emergencyRelation1">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="emergencyName2" class="form-label">Contact Name</label>
+                                        <label for="emergencyName2" class="form-label">Contact Name<span class="required">*</span></label>
                                         <input type="text" class="form-control" id="emergencyName2">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="emergencyPhone2" class="form-label">Contact Number</label>
+                                        <label for="emergencyPhone2" class="form-label">Contact Number<span class="required">*</span></label>
                                         <input type="tel" class="form-control" id="emergencyPhone2">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="emergencyRelation2" class="form-label">Relationship to Child</label>
+                                        <label for="emergencyRelation2" class="form-label">Relationship to Child<span class="required">*</span></label>
                                         <input type="text" class="form-control" id="emergencyRelation2">
                                     </div>
                                 </div>
@@ -760,7 +787,7 @@
                 <!-- Step 7: Payment Fees -->
                 <div class="card mb-4 shadow-sm">
                     <div class="card-header bg-success text-white">
-                        <h2 class="mb-0">Payment Fees</h2>
+                        <h2 class="mb-0" id="h2-enrol">Payment Fees</h2>
                     </div>
                     <div class="card-body">
                         <div class="form-step">
@@ -771,28 +798,28 @@
                                 <div class="col-md-6">
                                     <h3 class="text-success">Contact 1</h3>
                                     <div class="mb-3">
-                                        <label for="payee1Name" class="form-label">Full Name</label>
+                                        <label for="payee1Name" class="form-label">Full Name<span class="required">*</span></label>
                                         <input type="text" class="form-control" id="payee1Name">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="payee1Phone" class="form-label">Contact Number</label>
+                                        <label for="payee1Phone" class="form-label">Contact Number<span class="required">*</span></label>
                                         <input type="tel" class="form-control" id="payee1Phone">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="payee1Email" class="form-label">Email</label>
+                                        <label for="payee1Email" class="form-label">Email<span class="required">*</span></label>
                                         <input type="email" class="form-control" id="payee1Email">
                                     </div>
                                     <div class="mb-3">
                                         <label for="payee1Address" class="form-label">Home Address (including
-                                            postcode)</label>
+                                            postcode)<span class="required">*</span></label>
                                         <textarea class="form-control" id="payee1Address" rows="3"></textarea>
                                     </div>
                                     <div class="mb-3">
                                         <label for="payee1Relation" class="form-label">Relationship to Child</label>
-                                        <input type="text" class="form-control" id="payee1Relation">
+                                        <input type="text" class="form-control optional-info" id="payee1Relation">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="payee1Password" class="form-label">Password</label>
+                                        <label for="payee1Password" class="form-label">Password<span class="required">*</span></label>
                                         <input type="password" class="form-control" id="payee1Password"
                                             aria-describedby="passwordHelp1">
                                         <div id="passwordHelp1" class="form-text">Must be 8-20 characters long.</div>
@@ -801,31 +828,38 @@
 
                                 <!-- Contact 2 -->
                                 <div class="col-md-6">
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" id="contact2-form">
+                                        <label class="form-check-label" for="contact2-form">
+                                            Please tick if there is only 1 contact responsible for payments.
+                                        </label>
+                                    </div>
+
                                     <h3 class="text-success">Contact 2</h3>
                                     <div class="mb-3">
-                                        <label for="payee2Name" class="form-label">Full Name</label>
-                                        <input type="text" class="form-control" id="payee2Name">
+                                        <label for="payee2Name" class="form-label">Full Name<span class="required">*</span></label>
+                                        <input type="text" class="form-control contact2-info" id="payee2Name">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="payee2Phone" class="form-label">Contact Number</label>
-                                        <input type="tel" class="form-control" id="payee2Phone">
+                                        <label for="payee2Phone" class="form-label">Contact Number<span class="required">*</span></label>
+                                        <input type="tel" class="form-control contact2-info" id="payee2Phone">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="payee2Email" class="form-label">Email</label>
-                                        <input type="email" class="form-control" id="payee2Email">
+                                        <label for="payee2Email" class="form-label">Email<span class="required">*</span></label>
+                                        <input type="email" class="form-control contact2-info" id="payee2Email">
                                     </div>
                                     <div class="mb-3">
                                         <label for="payee2Address" class="form-label">Home Address (including
-                                            postcode)</label>
-                                        <textarea class="form-control" id="payee2Address" rows="3"></textarea>
+                                            postcode)<span class="required">*</span></label>
+                                        <textarea class="form-control contact2-info" id="payee2Address" rows="3"></textarea>
                                     </div>
                                     <div class="mb-3">
                                         <label for="payee2Relation" class="form-label">Relationship to Child</label>
-                                        <input type="text" class="form-control" id="payee2Relation">
+                                        <input type="text" class="form-control contact2-info optional-info" id="payee2Relation">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="payee2Password" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="payee2Password"
+                                        <label for="payee2Password" class="form-label">Password<span class="required">*</span></label>
+                                        <input type="password" class="form-control contact2-info" id="payee2Password"
                                             aria-describedby="passwordHelp2">
                                         <div id="passwordHelp2" class="form-text">Must be 8-20 characters long.</div>
                                     </div>
@@ -842,7 +876,7 @@
                 <!-- Step 8: Agreement & signatures-->
                 <div class="card mb-4 shadow-sm">
                     <div class="card-header bg-success text-white">
-                        <h2 class="mb-0">Agreement & Signatures</h2>
+                        <h2 class="mb-0" id="h2-enrol">Agreement & Signatures</h2>
                     </div>
                     <div class="card-body">
                         <div class="form-step">
@@ -879,33 +913,21 @@
 
                             <!-- Parent Signature -->
                             <div class="mb-3">
-                                <label for="parentSignature" class="form-label">Parent/Carer Signature</label>
+                                <label for="parentSignature" class="form-label">Parent/Carer Signature<span class="required">*</span></label>
                                 <input type="text" class="form-control" id="parentSignature" placeholder="Signed">
                             </div>
                             <div class="mb-3">
-                                <label for="parentDate" class="form-label">Date</label>
+                                <label for="parentDate" class="form-label">Date<span class="required">*</span></label>
                                 <input type="date" class="form-control" id="parentDate">
                             </div>
                             <div class="mb-3">
-                                <label for="parentPrint" class="form-label">Print Name</label>
+                                <label for="parentPrint" class="form-label">Print Name<span class="required">*</span></label>
                                 <input type="text" class="form-control" id="parentPrint">
                             </div>
 
                             <hr>
 
-                            <!-- Nursery Manager Signature -->
-                            <div class="mb-3">
-                                <label for="managerSignature" class="form-label">Nursery Manager Signature</label>
-                                <input type="text" class="form-control" id="managerSignature" placeholder="Signed">
-                            </div>
-                            <div class="mb-3">
-                                <label for="managerDate" class="form-label">Date</label>
-                                <input type="date" class="form-control" id="managerDate">
-                            </div>
-                            <div class="mb-3">
-                                <label for="managerPrint" class="form-label">Print Name</label>
-                                <input type="text" class="form-control" id="managerPrint">
-                            </div>
+
                             <div class="d-grid gap-2 mt-3">
                                 <button type="button" class="btn btn-secondary btn-prev">Previous</button>
                                 <button type="button" class="btn btn-brown btn-next">Next Step</button>
@@ -917,7 +939,7 @@
                 <!-- Review & Submit Section -->
                 <div class="card mb-4 shadow-sm">
                     <div class="card-header bg-success text-white">
-                        <h2 class="mb-0">Review & Submit</h2>
+                        <h2 class="mb-0" id="h2-enrol">Review & Submit</h2>
                     </div>
                     <div class="card-body">
                         <p>Please review all information you have entered. Make sure every section is complete and

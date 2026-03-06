@@ -13,9 +13,30 @@
     color: white;
   }
   .btn-brown:hover {
-    background-color: #A88B7C;
+    background-color: #bb947e;
+    color: white;
   }
   .card-header {
     background-color: var(--primary-colour) !important;
     color: white !important;
   }
+
+  .btn-prev {
+    background-color: var(--primary-colour);
+   
+  }
+
+  .btn-prev:hover {
+    background-color: rgb(126, 205, 62);
+  }
+
+  #h2-enrol {
+    color: white !important;
+    font-family: var(--secondary-font);
+  }
+
+  .required {
+    color: red;
+    margin-left: 2px; /* small spacing from label text */
+    font-weight: bold;
+}

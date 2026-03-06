@@ -26,11 +26,14 @@
     font-family: var(--primary-font);
 }
 
-.container h3{
+.container h3, .container h4{
    text-transform: capitalize; 
-   color: rgb(156, 104, 79);
+   color: var(--secondary-colour);
    font-family: var(--secondary-font);
 }
+
+h5 {
+    color: var(--secondary-colour);}
 
 
 .navbar {

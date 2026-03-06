@@ -18,50 +18,61 @@ function updateProgressBar() {
 }
 
 function validateStep(step) {
-    const inputs = step.querySelectorAll('input, textarea, select');
-    const groups = {};
-  
-    for (let input of inputs) {
-      if (input.offsetParent === null) continue; // skip hidden elements
-  
-      const type = input.type;
-  
-      // Track checkboxes and radio buttons
-      if (type === 'checkbox' || type === 'radio') {
-        const name = input.name || input.id;
-        if (!groups[name]) groups[name] = [];
-        groups[name].push(input);
-      }
-      // Select dropdown
-      else if (input.tagName === 'SELECT') {
-        if (!input.value) {
-          input.focus();
-          alert('Please select an option.');
-          return false; // stop validation immediately
-        }
-      }
-      // Text inputs and textareas
-      else {
-        if (!input.value.trim()) {
-          input.focus();
-          alert('Please fill out all fields before continuing.');
-          return false; // stop validation immediately
-        }
+  const inputs = step.querySelectorAll('input, textarea, select');
+  const groups = {};
+
+  for (let input of inputs) {
+    if (input.offsetParent === null || input.disabled) continue; // skip hidden elements
+
+    const type = input.type;
+
+    // Handle checkbox/radio groups
+    if (type === 'checkbox' || type === 'radio') {
+
+      // Skip optional top-up checkboxes
+      if (input.name === "topup") continue;
+
+      const name = input.name || input.id;
+
+      if (!groups[name]) groups[name] = [];
+      groups[name].push(input);
+    }
+
+    // Select dropdown
+    else if (input.tagName === 'SELECT') {
+      if (!input.value) {
+        input.focus();
+        alert('Please select an option.');
+        return false;
       }
     }
-  
-    // Check checkbox/radio groups
-    for (let groupName in groups) {
-      const group = groups[groupName];
-      if (!group.some(input => input.checked)) {
-        group[0].focus();
-        alert('Please select at least one option.');
-        return false; // stop validation immediately
+
+    // Text inputs and textareas
+    else {
+      // skip optional fields
+      if (input.classList.contains('optional-info')) continue;
+    
+      if (!input.value.trim()) {
+        input.focus();
+        alert('Please fill out all fields before continuing.');
+        return false;
       }
     }
-  
-    return true; // all fields valid
   }
+
+  // Validate checkbox/radio groups
+  for (let groupName in groups) {
+    const group = groups[groupName];
+
+    if (!group.some(input => input.checked)) {
+      group[0].focus();
+      alert('Please select at least one session.');
+      return false;
+    }
+  }
+
+  return true;
+}
    
  
   
@@ -92,3 +103,57 @@ prevBtns.forEach(btn => {
 
 // Initialize progress bar
 updateProgressBar();
+
+const noImmunisations = document.getElementById('noImmunisations');
+const immunDates = document.querySelectorAll('.immun-date');
+
+noImmunisations.addEventListener('change', function () {
+
+    immunDates.forEach(input => {
+
+        if (this.checked) {
+            input.value = "";
+            input.disabled = true;
+        } else {
+            input.disabled = false;
+        }
+
+    });
+
+});
+
+const noParent2 = document.getElementById('parent2-form');
+const parent2Info = document.querySelectorAll('.parent2-info');
+
+noParent2.addEventListener('change', function () {
+
+  parent2Info.forEach(input => {
+
+        if (this.checked) {
+            input.value = "";
+            input.disabled = true;
+        } else {
+            input.disabled = false;
+        }
+
+    });
+
+});
+
+const noContact2 = document.getElementById('contact2-form');
+const contact2Info = document.querySelectorAll('.contact2-info');
+
+noContact2.addEventListener('change', function () {
+
+  contact2Info.forEach(input => {
+
+        if (this.checked) {
+            input.value = "";
+            input.disabled = true;
+        } else {
+            input.disabled = false;
+        }
+
+    });
+
+});
