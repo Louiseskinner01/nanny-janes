@@ -7,11 +7,12 @@
 --primary-font: "Playpen Sans Thai", cursive;
 --primary-colour:  rgb(92, 149, 44);
 --secondary-colour: #8B6D5C;
+--theme-colour: rgb(230, 244, 219);
 }
 
 
 .container {
-    background-color: whitesmoke;
+    background-color: rgb(230, 244, 219);
     width: 80%;
     position: relative;
     border-radius: 10px;
@@ -21,7 +22,7 @@
 }
 
 .container h1, .container h2 {
-    color: rgb(92, 149, 44);
+    color: var(--primary-colour);
     text-transform: capitalize; 
     font-family: var(--primary-font);
 }
@@ -44,8 +45,8 @@ h5 {
 footer{
     margin-top: 30px;
     width: 100%;
-    background-color: whitesmoke;
-    color: var(--primary-colour);
+    background-color: white;
+    color: var(--secondary-colour);
     font-family: var(--secondary-font);
 }
 
