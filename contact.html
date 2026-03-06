@@ -50,28 +50,28 @@
 </header>
 
 <main>
- 
   <div class="container my-3">
     <div class="row justify-content-center">
         <div class="col-9 col-lg-8">  
-        <form id="form-contact">
+
+        <form id="form-contact" action="contact-form.php" method="POST" id="enrolForm">
           <h2 id="contact-header">Nanny Janes Nursery</h2>
           <h3>Islington N1 3AP</h3>
             <div>
             <label for="form-name" class="form-label">Your name</label>
-            <input type="text" class="form-control" id="form-name" placeholder="enter your name">
+            <input type="text" class="form-control" id="form-name" placeholder="enter your name" name="contact-name">
           </div>
           <div>
             <label for="form-email" class="form-label">Your email address</label>
-            <input type="email" class="form-control " id="form-email" placeholder="name@example.com">
+            <input type="email" class="form-control " id="form-email" placeholder="name@example.com" name="contact-email">
           </div>
           <div>
             <label for="form-child-age" class="form-label">Your childs age</label>
-            <input type="number" class="form-control" id="form-child-age" placeholder="">
+            <input type="number" class="form-control" id="form-child-age" placeholder="Enter your childs age" name="contact-childs-age">
           </div>
           <div class="form-group">
             <label for="form-reason">Reason for contact</label>
-            <select class="form-control" id="form-reason">
+            <select class="form-control" id="form-reason" name="contact-reason">
               <option>Nursery tour</option>
               <option>Nursery fees</option>
               <option>Information on the learning ciriculum</option>
@@ -80,7 +80,7 @@
           </div>
           <div>
             <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-            <textarea class="form-control mb-3" id="exampleFormControlTextarea1" rows="3" placeholder="type your message here..."></textarea>
+            <textarea class="form-control mb-3" id="exampleFormControlTextarea1" rows="3" placeholder="type your message here..." name="contact-message"></textarea>
           </div>
 
           <button type="submit" class="btn btn-brown btn-lg w-100">

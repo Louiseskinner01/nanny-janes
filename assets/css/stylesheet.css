@@ -5,17 +5,14 @@
 :root{
 --secondary-font: "Bpmf Iansui", cursive;
 --primary-font: "Playpen Sans Thai", cursive;
---primary-colour:  rgb(92, 149, 44);
+--primary-colour: rgb(92, 149, 44);
 --secondary-colour: #8B6D5C;
 --theme-colour: rgb(230, 244, 219);
 }   
 
+
 #home-container{
-    background-image: url("/assets/images/nanny-janes-enrol-image.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 400px;
+    background-color: white;
 }
 
 .container {
@@ -44,11 +41,6 @@ h5 {
     color: var(--secondary-colour);}
 
 
-.navbar {
-    background-color: white ;
-    font-family: var(--secondary-font);
-}
-
 footer{
     margin-top: 30px;
     width: 100%;
@@ -73,15 +65,18 @@ li{
     
 }
 
+.navbar {
+    background-color: white ;
+    font-family: var(--secondary-font);
+}
 
 a.nav-link {
-    color: rgb(80, 184, 28);
+    color: var(--secondary-colour);
     font-weight: bold;
-    margin: 0px 2px;
-    font-size: 15px;
+    font-size: 17px;
 }
 .nav-link.active {
-    color: rgb(139, 75, 26) !important;
+    color: var(--primary-colour) !important;
 }
 .nav-link:hover {
     color: #bb947e !important;
@@ -115,23 +110,28 @@ iframe {
     display: block;
 }
 
+#span-follow, #span-useful, #span-loction{
+    color: var(--primary-colour);
+}
+
 @media (min-width: 890px){
     a.nav-link {
         font-size: 20px;
+        margin: 0px 5px;
 }
 }
 
 @media (min-width: 1000px){
     a.nav-link {
         font-size: 24px;
-        
+        margin: 0px 6px;
 }
 }
 
 @media (min-width: 1140px){
     a.nav-link {
         font-size: 26px;
-        margin: 0px 7px;
+        margin: 0px 6px;
       
 }
 }
@@ -139,7 +139,7 @@ iframe {
 @media (min-width: 2000px){
     a.nav-link {
         font-size: 30px;
-        margin: 0px 10px;
+        margin: 0px 7px;
         
 }
 }
