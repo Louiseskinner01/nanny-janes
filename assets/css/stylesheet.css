@@ -8,8 +8,15 @@
 --primary-colour:  rgb(92, 149, 44);
 --secondary-colour: #8B6D5C;
 --theme-colour: rgb(230, 244, 219);
-}
+}   
 
+#home-container{
+    background-image: url("/assets/images/nanny-janes-enrol-image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 400px;
+}
 
 .container {
     background-color: rgb(230, 244, 219);
@@ -21,15 +28,15 @@
 
 }
 
-.container h1, .container h2 {
-    color: var(--primary-colour);
+.container h1, .container h2, h1 {
+    color: var(--primary-colour) !important;
     text-transform: capitalize; 
     font-family: var(--primary-font);
 }
 
-.container h3, .container h4{
+.container h3, .container h4, h3{
    text-transform: capitalize; 
-   color: var(--secondary-colour);
+   color: var(--secondary-colour) !important;
    font-family: var(--secondary-font);
 }
 
@@ -45,7 +52,7 @@ h5 {
 footer{
     margin-top: 30px;
     width: 100%;
-    background-color: white;
+    background-color: whitesmoke;
     color: var(--secondary-colour);
     font-family: var(--secondary-font);
 }

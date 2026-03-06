@@ -7,6 +7,9 @@
   }
 
 
+  #enrolment-container{
+    background-color: white
+  }
 
 .btn-brown {
     background-color: var(--secondary-colour);
