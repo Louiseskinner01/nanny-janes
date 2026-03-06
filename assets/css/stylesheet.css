@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Bpmf+Iansui&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans+Thai:wght@100..800&display=swap');
+
 
 :root{
---primary-font: "Bpmf Iansui", cursive;
+--secondary-font: "Bpmf Iansui", cursive;
+--primary-font: "Playpen Sans Thai", cursive;
+--primary-colour:  rgb(92, 149, 44);
+--secondary-colour: #8B6D5C;
 }
 
 
-
-
-
 .container {
-    background-color: #A8D5BA;
+    background-color: whitesmoke;
     width: 80%;
     position: relative;
     border-radius: 10px;
@@ -18,28 +20,30 @@
 
 }
 
-
-
-.container h2 {
-    color: green;
+.container h1, .container h2 {
+    color: rgb(92, 149, 44);
     text-transform: capitalize; 
+    font-family: var(--primary-font);
 }
 
 .container h3{
    text-transform: capitalize; 
    color: rgb(156, 104, 79);
+   font-family: var(--secondary-font);
 }
 
 
 .navbar {
     background-color: white ;
-    font-family: var(--primary-font);
+    font-family: var(--secondary-font);
 }
 
 footer{
     margin-top: 30px;
     width: 100%;
-    background-color: #A8D5BA;
+    background-color: whitesmoke;
+    color: var(--primary-colour);
+    font-family: var(--secondary-font);
 }
 
 #footer-span{
@@ -62,12 +66,16 @@ li{
 a.nav-link {
     color: rgb(80, 184, 28);
     font-weight: bold;
-    margin: 0px 5px;
+    margin: 0px 2px;
     font-size: 15px;
 }
 .nav-link.active {
     color: rgb(139, 75, 26) !important;
 }
+.nav-link:hover {
+    color: rgb(139, 75, 26) !important;
+}
+
 
 #enrolement-img {
     width: 238px;
@@ -111,7 +119,7 @@ iframe {
 
 @media (min-width: 1140px){
     a.nav-link {
-        font-size: 28px;
+        font-size: 26px;
         margin: 0px 7px;
       
 }
@@ -119,7 +127,7 @@ iframe {
 
 @media (min-width: 2000px){
     a.nav-link {
-        font-size: 40px;
+        font-size: 30px;
         margin: 0px 10px;
         
 }

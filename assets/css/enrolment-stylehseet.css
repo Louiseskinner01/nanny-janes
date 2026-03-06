@@ -1,11 +1,21 @@
+
+:root{
+  --secondary-font: "Bpmf Iansui", cursive;
+  --primary-font: "Playpen Sans Thai", cursive;
+  --primary-colour:  rgb(92, 149, 44);
+  --secondary-colour: #8B6D5C;
+  }
+
+
+
 .btn-brown {
-    background-color: #8B6D5C;
+    background-color: var(--secondary-colour);
     color: white;
   }
   .btn-brown:hover {
     background-color: #A88B7C;
   }
   .card-header {
-    background-color: #A8D5BA !important;
-    color: #4A4A4A !important;
+    background-color: var(--primary-colour) !important;
+    color: white !important;
   }
