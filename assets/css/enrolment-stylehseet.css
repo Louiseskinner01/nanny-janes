@@ -2,10 +2,13 @@
 :root{
   --secondary-font: "Bpmf Iansui", cursive;
   --primary-font: "Playpen Sans Thai", cursive;
-  --primary-colour:  rgb(92, 149, 44);
+  --primary-colour: rgb(92, 149, 44);
   --secondary-colour: #8B6D5C;
   }
 
+.bg-primary{
+  background-color: var(--primary-colour);
+}
 
   #enrolment-container{
     background-color: white
@@ -20,22 +23,23 @@
     color: white;
   }
   .card-header {
-    background-color: var(--primary-colour) !important;
-    color: white !important;
+    background-color: var(--theme-colour) !important;
+    color: var(--primary-colour) !important;
   }
 
   .btn-prev {
-    background-color: var(--primary-colour);
+    background-color: rgb(126, 205, 62);
    
   }
 
   .btn-prev:hover {
-    background-color: rgb(126, 205, 62);
+    background-color: var(--primary-colour);
   }
 
   #h2-enrol {
-    color: white !important;
+    color: var(--primary-colour) !important;
     font-family: var(--secondary-font);
+
   }
 
   .required {
