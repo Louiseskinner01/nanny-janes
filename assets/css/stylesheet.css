@@ -7,13 +7,11 @@
 --primary-font: "Playpen Sans Thai", cursive;
 --primary-colour: rgb(92, 149, 44);
 --secondary-colour: #8B6D5C;
---theme-colour: rgb(251, 255, 246);
+--theme-colour: rgb(253, 255, 251);
 }   
 
 
-#home-container, #about-container{
-    background-color: white;
-}
+
 
 .container {
     background-color: var(--theme-colour);
