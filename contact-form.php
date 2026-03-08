@@ -2,23 +2,30 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
+    $name = $_POST['contact-name'] ?? "";
+    $email = $_POST['contact-email'] ?? "";
+    $childs_age = $_POST['contact-childs-age'] ?? "";
+    $reason = $_POST['contact-reason'] ?? "";
+    $message = $_POST['contact-message'] ?? "";
 
     $to = "louise.skinner40@gmail.com";  
     $subject = "New Contact Form Message";
 
-    $body = "Name: $name\n";
-    $body .= "Email: $email\n\n";
-    $body .= "Message:\n$message";
+    $body = "New enquiry from your website:\n\n";
+    $body .= "Name: $name\n";
+    $body .= "Email: $email\n";
+    $body .= "Child's Age: $childs_age\n";
+    $body .= "Reason for Contact: $reason\n\n";
+    $body .= "Message:\n$message\n";
 
-    $headers = "From: $email";
+    $headers = "From: $email\r\n";
+    $headers .= "Reply-To: $email\r\n";
 
     mail($to, $subject, $body, $headers);
 
-    echo "Thank you. Your message has been sent.";
-
+    // Redirect to a thank-you page
+    header("Location: thank-you.html");
+    exit;
 }
 
 ?>
