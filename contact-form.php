@@ -18,8 +18,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $body .= "Reason for Contact: $reason\n\n";
     $body .= "Message:\n$message\n";
 
-    $headers = "From: $email\r\n";
+    $headers = "From: noreply@louise-testing.com\r\n";
     $headers .= "Reply-To: $email\r\n";
+    
 
     mail($to, $subject, $body, $headers);
 
