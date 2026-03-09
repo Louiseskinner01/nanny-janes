@@ -29,10 +29,6 @@ body{
 
 }
 
-
-
-
-
 .container h1, .container h2, h1 {
     color: var(--primary-colour) !important;
     text-transform: capitalize; 
@@ -84,7 +80,7 @@ li{
 a.nav-link {
     color: var(--secondary-colour);
     font-weight: bold;
-    font-size: 17px;
+    font-size: 16px;
 }
 .nav-link.active {
     color: var(--primary-colour) !important;
@@ -118,21 +114,22 @@ iframe {
 @media (min-width: 890px){
     a.nav-link {
         font-size: 20px;
-        margin: 0px 5px;
+       
 }
 }
 
 @media (min-width: 1000px){
     a.nav-link {
-        font-size: 24px;
-        margin: 0px 6px;
+        font-size: 20px;
+        margin: 0px 5px;
+       
 }
 }
 
 @media (min-width: 1140px){
     a.nav-link {
         font-size: 26px;
-        margin: 0px 6px;
+        margin: 0px 3px;
       
 }
 }
