@@ -114,6 +114,7 @@ iframe {
 @media (min-width: 890px){
     a.nav-link {
         font-size: 20px;
+        margin: 0px 2px;
        
 }
 }
