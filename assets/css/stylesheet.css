@@ -129,6 +129,12 @@ iframe {
     color: var(--secondary-colour);
 }
 
+@media (max-width: 768px) {
+    .navbar-nav {
+        padding: 10px 0 10px 20px;
+    }
+}
+
 @media (min-width: 890px){
     a.nav-link {
         font-size: 20px;
