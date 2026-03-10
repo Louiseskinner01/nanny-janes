@@ -40,6 +40,11 @@ body{
    font-family: var(--secondary-font);
 }
 
+.container-reviews{
+    background-color: var(--theme-colour);
+    border-radius: 10px;
+}
+
 h5 {
     color: var(--secondary-colour);}
 
