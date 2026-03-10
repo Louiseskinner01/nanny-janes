@@ -19,7 +19,7 @@ body{
 
 
 .container {
-    background-color: var(--theme-colour);
+    background-color: white;
     width: 80%;
     position: relative;
     border-radius: 10px;
@@ -66,7 +66,7 @@ li{
 li.info-links{
     color: white;
     background-color: var(--secondary-colour);
-    width: 40%;
+    width: 70%;
     border-radius: 5px;
     padding: 3px;
     
@@ -117,6 +117,11 @@ iframe {
 
 #span-follow, #span-useful, #span-loction{
     color: var(--primary-colour);
+}
+
+#enquire-link{
+    text-decoration: none;
+    color: var(--secondary-colour);
 }
 
 @media (min-width: 890px){

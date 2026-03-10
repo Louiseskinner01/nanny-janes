@@ -10,11 +10,6 @@
   background-color: var(--primary-colour);
 }
 
-li.bg-secondary{
-  background-color:pink !important;
-  color: white;
-}
-
   #enrolment-container{
     background-color: white;
   }
