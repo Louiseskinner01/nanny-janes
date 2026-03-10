@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nanny Janes</title>
+    <!-- Cookies link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -91,5 +93,25 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://kit.fontawesome.com/24a4f7102d.js" crossorigin="anonymous"></script>
 
+        <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+        <script>
+            window.addEventListener("load", function(){
+            window.cookieconsent.initialise({
+            palette: {
+            popup: { background: "#000" },
+            button: { background: "#f1d600" }
+            },
+            theme: "classic",
+            content: {
+            message: "This website uses cookies to ensure you get the best experience.",
+            dismiss: "Accept",
+            link: "Learn more",
+            href: "privacy-policy.html"
+            }
+            })
+            });
+            </script>
+    
+    
         </body>
         </html>
