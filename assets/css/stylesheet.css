@@ -7,7 +7,7 @@
 --primary-font: "Playpen Sans Thai", cursive;
 --primary-colour: rgb(92, 149, 44);
 --secondary-colour: #8B6D5C;
---theme-colour: rgb(253, 255, 251);
+--theme-colour: rgb(253, 255, 238);
 }   
 
 body{
@@ -16,7 +16,6 @@ body{
     display: flex;
     flex-direction: column;
 }
-
 
 
 .container {
@@ -64,6 +63,15 @@ li{
     list-style: none;
 }
 
+li.info-links{
+    color: white;
+    background-color: var(--secondary-colour);
+    width: 40%;
+    border-radius: 5px;
+    padding: 3px;
+    
+}
+
 .carousel-inner {
     border-radius: 30px;
 }
@@ -78,12 +86,12 @@ li{
 }
 
 a.nav-link {
-    color: var(--secondary-colour);
+    color: var(--primary-colour);
     font-weight: bold;
     font-size: 16px;
 }
 .nav-link.active {
-    color: var(--primary-colour) !important;
+    color: var(--secondary-colour) !important;
 }
 .nav-link:hover {
     color: #bb947e !important;
