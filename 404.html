@@ -88,20 +88,26 @@
 
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
 <script>
-    window.addEventListener("load", function(){
-    window.cookieconsent.initialise({
-    palette: {
-    popup: { background: "#000" },
-    button: { background: "#f1d600" }
-    },
-    theme: "classic",
-    content: {
-    message: "This website uses cookies to ensure you get the best experience.",
-    dismiss: "Accept",
-    link: "Learn more",
-    href: "privacy-policy.html"
-    }
-    })
+    window.addEventListener("load", function() {
+      window.cookieconsent.initialise({
+        palette: {
+          popup: { background: "#000" },
+          button: { background: "#f1d600", color: "#000" }
+        },
+        theme: "classic",
+        type: "opt-in",   // ensures user consent is stored
+        content: {
+          message: "This website uses cookies to ensure you get the best experience.",
+          dismiss: "Accept",
+          link: "Learn more",
+          href: "privacy-policy.html"
+        },
+        cookie: {
+          name: "cookieconsent_status", // cookie name
+          path: "/",                     // root path, so all pages can read it
+          expiryDays: 365                // keeps consent for 1 year
+        }
+      });
     });
     </script>
 
