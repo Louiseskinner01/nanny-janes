@@ -124,6 +124,10 @@ iframe {
     color: var(--primary-colour);
 }
 
+#homepage-slogan{
+    color: var(--secondary-colour);
+}
+
 #enquire-link{
     text-decoration: none;
     color: var(--secondary-colour);
