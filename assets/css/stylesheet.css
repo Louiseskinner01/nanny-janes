@@ -139,9 +139,9 @@ iframe {
     }
 }
 
-@media (min-width: 890px){
+@media (min-width: 880px){
     a.nav-link {
-        font-size: 20px;
+        font-size: 18px;
         margin: 0px 2px;
        
 }
