@@ -28,10 +28,14 @@ body{
 
 }
 
-.container h1, .container h2, h1 {
+.container h1, h1 {
     color: var(--primary-colour) !important;
     text-transform: capitalize; 
     font-family: var(--primary-font);
+}
+
+.container h2{
+    color: var(--secondary-colour);
 }
 
 .container h3, .container h4, h3{
@@ -136,6 +140,7 @@ a.nav-link {
 
 .content-section.active {
     display: block;
+    font-family: var(--secondary-font);
 }
 
 
