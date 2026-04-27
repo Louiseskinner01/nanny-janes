@@ -68,6 +68,15 @@ li{
     list-style: none;
 }
 
+.content-info-links a{
+    width: 70%;
+    border-radius: 5px;
+    padding: 3px; 
+    text-decoration: none;
+    color: var(--primary-colour); 
+    font-size: 18px;
+}
+
 li.info-links{
     color: white;
     background-color: var(--secondary-colour);
