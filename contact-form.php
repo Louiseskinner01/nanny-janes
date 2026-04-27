@@ -17,16 +17,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail = new PHPMailer(true);
 
     try {
-        // Use SMTP
+        // ✅ CORRECT SMTP SETTINGS
         $mail->isSMTP();
-        $mail->Host = 'smtpout.secureserver.net';
-        $mail->SMTPAuth = true;
-        $mail->Username = 'noreply@nannyjanesnursery.co.uk';
-        $mail->Password = 'YOUR_EMAIL_PASSWORD';
-        $mail->SMTPSecure = 'tls';
-        $mail->Port = 587;
+        $mail->Host = 'localhost';
+        $mail->SMTPAuth = false;
+        $mail->Username = 'info@nannyjanesnursery.co.uk';
+        $mail->Password = '';
+        $mail->SMTPSecure = 'false';
+        $mail->Port = 25;
 
-        $mail->setFrom('noreply@nannyjanesnursery.co.uk', 'Nanny Janes Website');
+
+        // Email setup
+        $mail->setFrom('info@nannyjanesnursery.co.uk', 'Website Contact');
         $mail->addAddress('info@nannyjanesnursery.co.uk');
         $mail->addReplyTo($email, $name);
 
@@ -43,11 +45,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $mail->send();
 
-        header("Location: thank-you.html");
+        
+        header("Location: thank-you.html");  // re-enable after testing
         exit;
 
     } catch (Exception $e) {
         echo "Message could not be sent. Error: {$mail->ErrorInfo}";
     }
 }
-?>

@@ -73,8 +73,14 @@ li.info-links{
     background-color: var(--secondary-colour);
     width: 70%;
     border-radius: 5px;
-    padding: 3px;
+    padding: 3px;   
     
+}
+
+li.info-links a{
+    list-style: none;          /* removes bullet */
+    text-decoration: none;     /* removes underline */
+    color: inherit;    
 }
 
 .carousel-inner {
@@ -113,6 +119,16 @@ a.nav-link {
     font-size: smaller;
     margin-left: 5px;
 }
+
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
 
 iframe {
     width: 100%;

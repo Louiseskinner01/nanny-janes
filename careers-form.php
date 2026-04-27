@@ -25,14 +25,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // Use SMTP
         $mail->isSMTP();
-        $mail->Host = 'smtpout.secureserver.net';
-        $mail->SMTPAuth = true;
-        $mail->Username = 'noreply@nannyjanesnursery.co.uk';
-        $mail->Password = 'YOUR_EMAIL_PASSWORD';
-        $mail->SMTPSecure = 'tls';
-        $mail->Port = 587;
+        $mail->Host = 'localhost';
+        $mail->SMTPAuth = false;
+        $mail->Username = 'info@nannyjanesnursery.co.uk';
+        $mail->Password = '';
+        $mail->SMTPSecure = 'false';
+        $mail->Port = 25;
 
-        $mail->setFrom('noreply@nannyjanesnursery.co.uk', 'Nanny Janes Website');
+        $mail->setFrom('info@nannyjanesnursery.co.uk', 'Nanny Janes Website');
         $mail->addAddress('info@nannyjanesnursery.co.uk');
         $mail->addReplyTo($email);
 
@@ -42,8 +42,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Body .= "First name: $first_name\n";
         $mail->Body .= "Last name: $last_name\n";
         $mail->Body .= "Email: $email\n";
-
-        $mail->Body = $body;
 
         // Attach CV
         if (!empty($cv_tmp)) {
