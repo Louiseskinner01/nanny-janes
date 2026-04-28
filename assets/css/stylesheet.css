@@ -186,8 +186,46 @@ iframe {
 
 #enquire-link{
     text-decoration: none;
-    color: var(--secondary-colour);
+    color: var(--primary-colour);
 }
+
+.homepage-layout{
+    display:flex;
+    flex-direction:column;
+}
+
+/* mobile default */
+.hero-section{
+    order:1;
+}
+
+.enquire-section{
+    order:2;
+}
+
+.reviews-section{
+    order:3;
+}
+
+/* desktop restore original order */
+@media (min-width:768px){
+
+    .hero-section{
+        order:2;
+    }
+
+    .enquire-section{
+        order:3;
+    }
+
+    .reviews-section{
+        order:1;
+    }
+
+}
+
+
+
 
 @media (max-width: 768px) {
     .navbar-nav {
