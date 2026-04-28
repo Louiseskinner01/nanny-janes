@@ -150,6 +150,16 @@ a.nav-link {
     object-fit: cover;    /* crops neatly */
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+    filter: invert(2);
+}
+
+
+
+
 iframe {
     width: 100%;
     max-width: 100%;
