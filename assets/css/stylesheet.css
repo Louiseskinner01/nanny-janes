@@ -51,6 +51,10 @@ body{
     border-radius: 10px;
 }
 
+h4.h4-green{
+    color: var(--primary-colour) !important;
+}
+
 h5 {
     color: var(--secondary-colour);}
 
@@ -74,13 +78,19 @@ li{
     list-style: none;
 }
 
+.send-list{
+   margin-bottom: 10px;
+    width: 100%;
+}
+
 .content-info-links a{
     width: 70%;
     border-radius: 5px;
     padding: 3px; 
     text-decoration: none;
-    color: var(--primary-colour); 
+    color: var(--secondary-colour); 
     font-size: 20px;
+    text-decoration:underline;
 }
 
 li.info-links{
@@ -146,8 +156,8 @@ a.nav-link {
 }
 
 .carousel-img {
-    height: 250px;        /* choose size */
-    object-fit: cover;    /* crops neatly */
+    height: 425px;        
+    object-fit: cover;    
 }
 
 .carousel-control-prev-icon,
