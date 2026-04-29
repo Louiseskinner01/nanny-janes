@@ -58,12 +58,14 @@ h4.h4-green{
 h5 {
     color: var(--secondary-colour);}
 
-
+footer h2{
+    color: pink;
+}
 footer{
     margin-top: auto;
     width: 100%;
-    background-color: whitesmoke;
-    color: var(--secondary-colour);
+    background-color: rgb(244, 246, 231);
+    color: var(--primary-colour);
     font-family: var(--secondary-font);
     bottom: 0;
     position: relative;
@@ -71,7 +73,8 @@ footer{
 }
 
 #footer-span{
-    margin-top: 50px;
+    font-size: 10px;
+    color: var(--primary-colour);
 }
 
 li{
@@ -161,7 +164,7 @@ a.nav-link {
 }
 
 .carousel-img {
-    height: 550px;        
+    height: auto;        
     object-fit: cover;    
 }
 
@@ -182,7 +185,8 @@ iframe {
 }
 
 #span-follow, #span-useful, #span-loction{
-    color: var(--primary-colour);
+    color: var(--secondary-colour);
+
 }
 
 #homepage-slogan{
