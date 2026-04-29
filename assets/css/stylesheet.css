@@ -164,7 +164,8 @@ a.nav-link {
 }
 
 .carousel-img {
-    height: auto;        
+    height: 450px !important;
+
     object-fit: cover;    
 }
 
