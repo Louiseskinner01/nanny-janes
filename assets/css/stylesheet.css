@@ -79,8 +79,9 @@ li{
 }
 
 .send-list{
-   margin-bottom: 10px;
+    margin-bottom: 10px;
     width: 100%;
+    color: var(--secondary-colour);
 }
 
 .content-info-links a{
@@ -91,6 +92,10 @@ li{
     color: var(--secondary-colour); 
     font-size: 20px;
     text-decoration:underline;
+}
+
+.funding-list{
+    color: var(--secondary-colour);
 }
 
 li.info-links{
@@ -206,6 +211,40 @@ iframe {
 .reviews-section{
     order:3;
 }
+
+
+
+/* ----------------------------------------------Bullet Points*/
+.bear-list{
+    list-style:none;
+    padding-left:0;
+}
+
+.bear-list li{
+    position:relative;
+    padding-left:35px;
+    margin-bottom:12px;
+}
+
+.bear-list li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:2px;
+    width:22px;
+    height:22px;
+    background:url("../images/svg/teddy-bear.svg") no-repeat center;
+    background-size:contain;
+}
+
+
+
+
+
+
+
+
+
 
 /* desktop restore original order */
 @media (min-width:768px){
