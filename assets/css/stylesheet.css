@@ -165,7 +165,6 @@ a.nav-link {
 
 .carousel-img {
     height: 450px !important;
-
     object-fit: cover;    
 }
 
@@ -248,7 +247,11 @@ iframe {
 
 
 
-
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 220px !important;
+    }
+}
 
 
 /* desktop restore original order */
