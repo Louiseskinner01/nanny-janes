@@ -164,7 +164,10 @@ color: pink;
     color: var(--primary-colour) !important;
 }
 
-
+a[href^="tel"] {
+    color: var(--primary-colour) !important;
+    text-decoration: none;
+}
     
 
 
