@@ -52,7 +52,9 @@ body{
     border-radius: 10px;
 }
 
-
+.row{
+    padding: 0;
+}
 
 h4.h4-green{
     color: var(--primary-colour) !important;
@@ -69,8 +71,9 @@ h6{
 
 
 .enquire-section a{
-    color: rgb(200, 121, 60);
+    color: rgb(4, 84, 12);
     text-decoration: none;
+    font-family: var(--secondary-font)
 }
 
 
@@ -83,8 +86,10 @@ footer{
     width: 100%;
 
     background: linear-gradient(to bottom, 
-        var(--feature-colour) 70%, 
-        var(--primary-colour) 80%, 
+        yellow 10%,
+        orange 15%,
+        var(--feature-colour) 30%, 
+        var(--primary-colour) 100%, 
         var(--secondary-colour)) 80%;
 
     color: var(--primary-colour);
@@ -99,6 +104,11 @@ footer{
     color: var(--primary-colour);
 }
 
+.footer-content {
+    position: relative;
+    z-index: 2;
+}
+
 .footer-overlay {
     position: absolute;
     bottom: 35vw;
@@ -109,40 +119,26 @@ footer{
 }
 
 #footer-address {
+        color: rgb(32, 4, 104)!important;
         width: 100%;
-        /*      
-        max-width: 250px;    controls circle size 
-        aspect-ratio: 1 / 1;
-        */
-        color: var(--primary-colour) !important;
-        width: 100%;
-        background-color: white;
-        border-radius: 17px;
         margin: 0 auto;     /* keeps it centered */
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    
-        padding: 15px;
+        padding: 0px !important;
         box-sizing: border-box;
+
     }
     
-
-.footer-content {
-    position: relative;
-    z-index: 2;
-}
-
 #footer-follow{
     padding-top: 50px;
     color: var(--feature-colour);
 }
 
-
 #footer-resource-links{
-   padding-top: 30px;
-   color: purple;
+   padding-top: 10px;
+   color: white;
    font-size: 17px;
     }
 
@@ -168,9 +164,45 @@ a[href^="tel"] {
     color: var(--primary-colour) !important;
     text-decoration: none;
 }
-    
+
+.h4-useful-links{
+    color: rgb(32, 4, 104)!important;
+}
+
+footer .row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.address-box{
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.37);
+    display: inline-block;
+    max-width: 300px;
+    padding: 5px;
+    border-radius: 50%;
+  
+
+}
 
 
+/*
+.cloud {
+    background: white;
+    padding: 30px 20px;
+    text-align: center;
+    width: 100% !important;
+    padding: 40px 25px;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    clip-path: path("M50 150 Q30 120 60 110 Q40 80 80 80 Q90 40 130 60 Q170 20 200 60 Q240 50 240 100 Q270 110 240 140 Q200 170 150 150 Q120 180 80 160 Q60 170 50 150 Z");
+}
+*/
 
 /*-----------------------------------------*/
 
