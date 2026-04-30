@@ -7,7 +7,8 @@
 --primary-font: "Playpen Sans Thai", cursive;
 --primary-colour: rgb(92, 149, 44);
 --secondary-colour: #8B6D5C;
---theme-colour: rgb(253, 255, 238);
+--theme-colour: rgb(244, 246, 231);
+--feature-colour: rgb(183, 145, 234);
 }   
 
 body{
@@ -51,6 +52,8 @@ body{
     border-radius: 10px;
 }
 
+
+
 h4.h4-green{
     color: var(--primary-colour) !important;
 }
@@ -65,14 +68,20 @@ h6{
 
 
 
-    /*---------------------------------Footer*/
+.enquire-section a{
+    color: var(--feature-colour);
+    text-decoration: none;
+}
+
+
+/*---------------------------------------------------------Footer*/
 footer h2{
     color: pink;
 }
 footer{
     margin-top: auto;
     width: 100%;
-    background-color: var(--secondary-colour);
+    background-color: var(--theme-colour);
     color: var(--primary-colour);
     font-family: var(--secondary-font);
     bottom: 0;
@@ -85,7 +94,6 @@ footer{
     color: var(--primary-colour);
 }
 
-
 .footer-overlay {
     position: absolute;
     bottom: 35vw;
@@ -97,13 +105,14 @@ footer{
 
 #footer-address {
         width: 100%;
-        /*
-        border...
+        /*      
         max-width: 250px;    controls circle size 
         aspect-ratio: 1 / 1;
         */
-        color: white;
-        
+        color: var(--primary-colour) !important;
+        width: 100%;
+        background-color: white;
+        border-radius: 17px;
         margin: 0 auto;     /* keeps it centered */
         display: flex;
         flex-direction: column;
@@ -126,14 +135,12 @@ footer{
 
 
 #footer-resource-links{
-    border: 1px solid pink;
-    border-radius: 50%;
-    padding-top: 30px;
+   padding-top: 30px;
     }
 
 #footer-resource-links a{
     text-transform: none;
-    color: rgb(192, 219, 255);
+    color: var(--feature-colour);
 }
 
 #span-useful, #span-loction{
@@ -150,7 +157,7 @@ color: pink;
 
 
 
-
+/*-----------------------------------------*/
 
 li{
     list-style: none;
@@ -199,8 +206,9 @@ li.info-links a{
     
 }
 
+/*-----------------------------------------NavBar*/
 .navbar {
-    background-color: rgb(244, 246, 231) ;
+    background-color: var(--theme-colour);
     font-family: var(--secondary-font);
 }
 
@@ -250,23 +258,15 @@ a.nav-link {
     filter: invert(2);
 }
 
-
-
-
 iframe {
     width: 100%;
     max-width: 100%;
     display: block;
 }
 
-
-
 #homepage-slogan{
     color: var(--secondary-colour);
 }
-
-
-
 
 .homepage-layout{
     display:flex;
@@ -285,8 +285,6 @@ iframe {
 .reviews-section{
     order:3;
 }
-
-
 
 /* ----------------------------------------------Bullet Points*/
 .bear-list{
@@ -324,7 +322,7 @@ iframe {
 }
 
 
-/* desktop restore original order */
+/*--------------------------------------Desktop restore original order */
 @media (min-width:768px){
 
     .hero-section{
@@ -350,7 +348,7 @@ iframe {
     }
 }
 
-/*------------------------------------------Overlay Media Queries*/
+/*------------------------------------------Footer Overlay Media Queries*/
 @media (min-width: 375px) {
     .footer-overlay {
         bottom: 117px;
@@ -398,9 +396,7 @@ iframe {
     }
 }
 
-
-
-
+/*-----------------------------------------Nav Links*/
 
 @media (min-width: 880px){
     a.nav-link {
