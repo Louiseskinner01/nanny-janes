@@ -160,6 +160,10 @@ i.fa-brands{
 color: pink;
     }
 
+.contact-numbers{
+    color: var(--primary-colour) !important;
+}
+
 
     
 
