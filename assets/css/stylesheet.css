@@ -81,7 +81,12 @@ footer h2{
 footer{
     margin-top: auto;
     width: 100%;
-    background-color: var(--theme-colour);
+
+    background: linear-gradient(to bottom, 
+        var(--feature-colour) 10%, 
+        var(--primary-colour) 50%, 
+        var(--secondary-colour)) 100%;
+
     color: var(--primary-colour);
     font-family: var(--secondary-font);
     bottom: 0;
@@ -131,6 +136,7 @@ footer{
 
 #footer-follow{
     padding-top: 50px;
+    color: var(--feature-colour);
 }
 
 
