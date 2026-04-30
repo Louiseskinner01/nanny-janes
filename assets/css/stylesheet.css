@@ -8,7 +8,7 @@
 --primary-colour: rgb(92, 149, 44);
 --secondary-colour: #8B6D5C;
 --theme-colour: rgb(244, 246, 231);
---feature-colour: rgb(183, 145, 234);
+--feature-colour: rgb(195, 223, 238);
 }   
 
 body{
@@ -69,7 +69,7 @@ h6{
 
 
 .enquire-section a{
-    color: var(--feature-colour);
+    color: rgb(200, 121, 60);
     text-decoration: none;
 }
 
@@ -83,9 +83,9 @@ footer{
     width: 100%;
 
     background: linear-gradient(to bottom, 
-        var(--feature-colour) 10%, 
-        var(--primary-colour) 50%, 
-        var(--secondary-colour)) 100%;
+        var(--feature-colour) 70%, 
+        var(--primary-colour) 80%, 
+        var(--secondary-colour)) 80%;
 
     color: var(--primary-colour);
     font-family: var(--secondary-font);
@@ -142,11 +142,13 @@ footer{
 
 #footer-resource-links{
    padding-top: 30px;
+   color: purple;
+   font-size: 17px;
     }
 
 #footer-resource-links a{
     text-transform: none;
-    color: var(--feature-colour);
+    color: var(--secondary-colour);
 }
 
 #span-useful, #span-loction{
@@ -343,6 +345,12 @@ iframe {
         order:1;
     }
 
+    #footer-resource-links a{
+        text-transform: none;
+        color: white;
+        font-size: 18px;
+    }
+   
 }
 
 
@@ -352,6 +360,8 @@ iframe {
     .navbar-nav {
         padding: 10px 0 10px 20px;
     }
+
+   
 }
 
 /*------------------------------------------Footer Overlay Media Queries*/
