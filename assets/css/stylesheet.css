@@ -56,7 +56,14 @@ h4.h4-green{
 }
 
 h5 {
-    color: var(--secondary-colour);}
+    color: var(--secondary-colour);
+}
+
+h6{
+    color: rgb(199, 245, 245);
+}
+
+
 
     /*---------------------------------Footer*/
 footer h2{
@@ -81,43 +88,53 @@ footer{
 
 .footer-overlay {
     position: absolute;
-    bottom: 0;
-    right: 0; 
-    width: 300px; 
-    opacity: 2.5; /* optional */
+    bottom: 35vw;
+    right:  1vw;
+    width: 270px;
+    opacity: 1.5;
     pointer-events: none;
 }
+
+#footer-address {
+        width: 100%;
+        /*
+        border...
+        max-width: 250px;    controls circle size 
+        aspect-ratio: 1 / 1;
+        */
+        color: white;
+        
+        margin: 0 auto;     /* keeps it centered */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    
 
 .footer-content {
     position: relative;
     z-index: 2;
 }
 
-#footer-address{
-    border: 1px solid var(--secondary-colour);
-    border-radius: 50%;
-    background-color: rgb(255, 255, 194);
-    padding-top: 48px;
-    padding-right: 25px;
-    
-    width: auto;
-    
-}
-
 #footer-follow{
-border: 1px solid var(--secondary-colour);
-border-radius: 50%;
-padding-top: 50px;
-
+    padding-top: 50px;
 }
+
 
 #footer-resource-links{
-    border: 1px solid var(--secondary-colour);
+    border: 1px solid pink;
     border-radius: 50%;
-    background-color: rgb(241, 211, 231);
     padding-top: 30px;
-    width: auto;
     }
+
+#footer-resource-links a{
+    text-transform: none;
+    color: rgb(192, 219, 255);
+}
 
 #span-useful, #span-loction{
     color: var(--secondary-colour);
@@ -128,6 +145,8 @@ i.fa-brands{
 color: pink;
     }
 
+
+    
 
 
 
@@ -246,10 +265,6 @@ iframe {
     color: var(--secondary-colour);
 }
 
-#footer-resource-link, #enquire-link{
-    text-decoration: none;
-    color: var(--primary-colour);
-}
 
 
 
@@ -334,6 +349,58 @@ iframe {
         padding: 10px 0 10px 20px;
     }
 }
+
+/*------------------------------------------Overlay Media Queries*/
+@media (min-width: 375px) {
+    .footer-overlay {
+        bottom: 117px;
+        right: 10px;
+        width: 290px;
+    }
+}
+
+@media (min-width: 425px) {
+    .footer-overlay {
+        bottom: 117px;
+        right: 10px;
+        width: 310px;
+    }
+}
+
+@media (min-width: 425px) {
+    .footer-overlay {
+        bottom: 117px;
+        right: 10px;
+        width: 330px;
+    }
+}
+
+@media (min-width: 474px) {
+    .footer-overlay {
+        bottom: 80px;
+        right: 10px;
+        width: 350px;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer-overlay {
+        bottom: 15px;
+        right: 5px;
+        width: 400px;
+    }
+}
+@media (min-width: 992px) {
+    .footer-overlay {
+        bottom: 5px;
+        right: 25px;
+        width: 300px;
+    }
+}
+
+
+
+
 
 @media (min-width: 880px){
     a.nav-link {
