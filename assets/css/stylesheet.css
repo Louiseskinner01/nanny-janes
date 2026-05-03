@@ -299,10 +299,20 @@ a.nav-link {
 
 .carousel-inner {
     border-radius: 30px;
+    height: 100%;
 }
 
 .carousel-item {
-    height: 400px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    object-position: center;
 }
 
 .carousel-control-prev-icon,
@@ -399,6 +409,11 @@ iframe {
         font-size: 26px !important;
         color: white;
     }
+
+    .carousel-item {
+        height: 300px;
+        overflow: hidden;
+    }
    
 }
 
@@ -458,6 +473,11 @@ iframe {
         bottom: 5px;
         right: 25px;
         width: 300px;
+    }
+
+    .carousel-item {
+        height: 400px;
+        overflow: hidden;
     }
 }
 
