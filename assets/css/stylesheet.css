@@ -87,8 +87,8 @@ footer{
 
     background: linear-gradient(to bottom, 
         yellow 10%,
-        orange 15%,
-        var(--feature-colour) 30%, 
+        orange 30%,
+        var(--feature-colour) 50%, 
         var(--primary-colour) 100%, 
         var(--secondary-colour)) 80%;
 
@@ -131,20 +131,30 @@ footer{
 
     }
     
-#footer-follow{
-    padding-top: 50px;
-    color: var(--feature-colour);
+h5#follow-header{
+    font-size: 29px;
+    color: rgb(32, 4, 104)!important;
+}
+
+.footer-feature-follow, .footer-feature-useful{
+    background-color: rgba(255, 255, 255, 0.644);
+    border: white solid 3px;
+    border-radius: 38px;
+    padding: 8px 0;
 }
 
 #footer-resource-links{
-   padding-top: 10px;
+  
    color: white;
    font-size: 17px;
+   padding: 15px 0px;
     }
 
 #footer-resource-links a{
-    text-transform: none;
-    color: var(--secondary-colour);
+    text-decoration: none;
+    word-spacing: 2px;
+    color: rgb(32, 4, 104);
+    
 }
 
 #span-useful, #span-loction{
@@ -152,9 +162,12 @@ footer{
     
     }
 
+
+
 i.fa-brands{
-color: pink;
-    }
+    font-size: 32px  !important;
+    color: white;
+}
 
 .contact-numbers{
     color: var(--primary-colour) !important;
@@ -245,13 +258,7 @@ li.info-links a{
     color: inherit;    
 }
 
-.carousel-inner {
-    border-radius: 30px;
-}
-.carousel-item {
-    width: 100%;
-    
-}
+
 
 /*-----------------------------------------NavBar*/
 .navbar {
@@ -297,7 +304,13 @@ a.nav-link {
     height: 450px !important;
     object-fit: cover;    
 }
-
+.carousel-inner {
+    border-radius: 30px;
+}
+.carousel-item {
+    width: 100%;
+    
+}
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     width: 3rem;
@@ -366,6 +379,9 @@ iframe {
     .carousel-item img {
         height: 220px !important;
     }
+    h5#footer-follow{
+        color:rgb(32, 4, 104);
+    }
 }
 
 
@@ -385,8 +401,7 @@ iframe {
     }
 
     #footer-resource-links a{
-        text-transform: none;
-        color: white;
+        text-transform: none;      
         font-size: 18px;
     }
    
