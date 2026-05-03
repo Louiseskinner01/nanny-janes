@@ -143,17 +143,16 @@ h5#follow-header{
     padding: 8px 0;
 }
 
-#footer-resource-links{
-  
-   color: white;
-   font-size: 17px;
-   padding: 15px 0px;
-    }
+.h4-useful-links{
+    color: rgb(32, 4, 104)!important;
+    font-size: 29px;
+}
 
 #footer-resource-links a{
     text-decoration: none;
     word-spacing: 2px;
     color: rgb(32, 4, 104);
+    font-size: 23px !important;
     
 }
 
@@ -163,10 +162,9 @@ h5#follow-header{
     }
 
 
-
 i.fa-brands{
     font-size: 32px  !important;
-    color: white;
+    color: rgb(242, 253, 255);
 }
 
 .contact-numbers{
@@ -178,9 +176,7 @@ a[href^="tel"] {
     text-decoration: none;
 }
 
-.h4-useful-links{
-    color: rgb(32, 4, 104)!important;
-}
+
 
 footer .row {
     margin-right: 0;
@@ -402,7 +398,8 @@ iframe {
 
     #footer-resource-links a{
         text-transform: none;      
-        font-size: 18px;
+        font-size: 26px !important;
+        color: white;
     }
    
 }
