@@ -39,7 +39,9 @@ body{
     color: rgb(87, 47, 16);
     font-family: var(--secondary-font);
 }
-
+.secondary-font{
+    font-family: var(--secondary-font);
+}
 
 .container h3, .container h4, h3{
    text-transform: capitalize; 
