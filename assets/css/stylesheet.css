@@ -486,7 +486,7 @@ iframe {
     }
 
     .carousel-index{
-        height: 400px;
+        height: 100%;
         overflow: hidden;
     }
 
@@ -508,6 +508,7 @@ iframe {
         margin: 0px 2px;
        
 }
+
 }
 
 @media (min-width: 1000px){
