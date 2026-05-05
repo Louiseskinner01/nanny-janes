@@ -281,7 +281,8 @@ a.nav-link {
     display: block;
     font-family: var(--secondary-font);
 }
-  
+ 
+/*--------------------------------------Carousel*/
 #reviewCarousel .carousel-item {
     height: auto !important;
    
@@ -371,7 +372,7 @@ iframe {
 
 @media (max-width: 768px) {
     .carousel-item img {
-        height: 220px !important;
+        height: 100% !important;
     }
     h5#footer-follow{
         color:rgb(32, 4, 104);
@@ -401,7 +402,7 @@ iframe {
     }
 
     .carousel-item {
-        height: 300px;
+        height: 100%;
         overflow: hidden;
     }
 
@@ -480,7 +481,7 @@ iframe {
     }
 
     .carousel-item {
-        height: 400px;
+        height: 100%;
         overflow: hidden;
     }
 
