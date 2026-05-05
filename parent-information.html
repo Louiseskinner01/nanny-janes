@@ -55,15 +55,17 @@
     <main>
         <div class="container my-3">
             <div class="row justify-content-center text-center">
-                <!-- Content Section -->
+                
                 <div class="col-12 col-md-6 col-lg-8">
                     <h1 class="mb-3">Welcome Parents</h1>
-                    <p>This section of the website has been created as a helpful resource for parents and carers, where
+                    <p id="intro-p">This section of the website has been created as a helpful resource for parents and carers, where
                         you can find important nursery information, term dates, fees, and key policies such as
                         safeguarding and health and safety. We hope you will find all the information you need here, but
                         if you have any further questions, please do not hesitate to contact the nursery by telephone or
                         email. <br>Our team will always be happy to help and assist you in any way we can.</p>
 
+
+                    <!-- Content section Links -->
                     <div class="content-section" id="term-dates">
                         <h2 class="mb-3">Term Dates</h2>
                         <p>We follow the islington council school term dates, follow link
@@ -283,7 +285,7 @@
                         </p>
                     </div>
 
-                    <div class="content-section justify-content-center" id="ofsted-Report">
+                    <div class="content-section justify-content-center" id="ofsted-report">
                         <h2>Ofsted Report</h2>
 
                         <p>
@@ -306,7 +308,7 @@
                     <h2 class="mb-3">Information Links</h2>
                     <ul>
                         <li class="info-links text-center mb-2 mx-auto">
-                            <a href="#" onclick="showSection('term-dates')">Term Dates</a>
+                            <a href="#" onclick="showSection('term-dates')" return false;>Term Dates</a>
                         </li>
                         <li class="info-links text-center mb-2 mx-auto">
                             <a href="#" onclick="showSection('food-menu')">Food Menu</a>
