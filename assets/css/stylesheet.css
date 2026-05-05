@@ -225,10 +225,10 @@ li{
 li.info-links{
     color: white;
     background-color: var(--secondary-colour);
-    width: 75%;
+    width: 100%;
     border-radius: 6px;
-    padding: 8px;  
-    font-size: 18px; 
+    padding: 6px;  
+    font-size: 17px; 
     
 }
 
