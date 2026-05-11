@@ -9,6 +9,7 @@ require 'Exception.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $name = $_POST['contact-name'] ?? "";
+    $contact = $_POST['contact-contact'] ?? "";
     $email = $_POST['contact-email'] ?? "";
     $childs_age = $_POST['contact-childs-age'] ?? "";
     $reason = $_POST['contact-reason'] ?? "";
