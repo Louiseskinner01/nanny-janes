@@ -18,10 +18,7 @@ body{
     flex-direction: column;
 }
 
-#cv-upload {
-    position: relative;
-    z-index: 9999;
-}
+
 
 .container {
     background-color: rgb(255, 255, 255);
@@ -43,8 +40,15 @@ body{
     color: rgb(87, 47, 16);
     font-family: var(--secondary-font);
 }
+
 .secondary-font{
     font-family: var(--secondary-font);
+}
+
+.bg-feature{
+    background-color: rgb(214, 253, 155);
+    border: 1px solid white;
+    border-radius: 10px;
 }
 
 .container h3, .container h4, h3{
@@ -183,7 +187,6 @@ a[href^="tel"] {
 }
 
 
-
 footer .row {
     margin-right: 0;
     margin-left: 0;
@@ -199,7 +202,6 @@ footer .row {
   
 
 }
-
 
 
 /*-----------------------------------------*/
