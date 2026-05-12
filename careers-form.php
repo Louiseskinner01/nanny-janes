@@ -16,8 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $last_name = $_POST['contact-last-name'] ?? "";
     $email = $_POST['contact-email'] ?? "";
 
-    $cv_tmp = $_FILES['contact-cv']['tmp_name'];
-    $cv_name = $_FILES['contact-cv']['name'];
+    $cv_tmp = $_FILES['contact-cv']['tmp_name'] ?? '';
+    $cv_name = $_FILES['contact-cv']['name'] ?? '';
 
     $mail = new PHPMailer(true);
 
@@ -38,15 +38,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $mail->Subject = "New Career Form Message";
 
-        $mail->Body = "New enquiry from your website:\n\n";
-        $mail->Body .= "First name: $first_name\n";
-        $mail->Body .= "Last name: $last_name\n";
-        $mail->Body .= "Email: $email\n";
+        $body = "New enquiry from your website:\n\n";
+        $body .= "First name: $first_name\n";
+        $body .= "Last name: $last_name\n";
+        $body .= "Email: $email\n";
+
 
         // Attach CV
         if (!empty($cv_tmp)) {
             $mail->addAttachment($cv_tmp, $cv_name);
         }
+
+        $mail->Body = $body;
 
         $mail->send();
 

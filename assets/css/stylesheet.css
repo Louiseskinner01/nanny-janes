@@ -18,6 +18,10 @@ body{
     flex-direction: column;
 }
 
+#cv-upload {
+    position: relative;
+    z-index: 9999;
+}
 
 .container {
     background-color: rgb(255, 255, 255);

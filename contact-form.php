@@ -1,11 +1,15 @@
 <?php
+
+// use the classes
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+// load PHPMailer files
 require 'PHPMailer.php';
 require 'SMTP.php';
 require 'Exception.php';
 
+// Your existing code starts here
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $name = $_POST['contact-name'] ?? "";
