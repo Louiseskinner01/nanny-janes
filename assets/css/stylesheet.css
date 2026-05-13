@@ -78,6 +78,9 @@ h6{
     color: rgb(199, 245, 245);
 }
 
+h3#tahnkyou-h3{
+    text-transform: none !important;
+}
 
 
 .enquire-section a{
@@ -91,6 +94,7 @@ h6{
 footer h2{
     color: pink;
 }
+
 footer{
     margin-top: auto;
     width: 100%;
@@ -300,7 +304,7 @@ a.nav-link {
 }
 
 .carousel-item{
-    height: 200px;
+    height: 250px;
     overflow: hidden;
 }
 
@@ -372,122 +376,65 @@ iframe {
 
 
 
+@media (min-width: 445px) {
+    .carousel-item {
+        min-height: 350px !important;
+    }
+   
+}
 
 
+@media (min-width: 768px) {
+
+    .hero-section {
+        order: 2;
+    }
+
+    .enquire-section {
+        order: 3;
+    }
+
+    .reviews-section {
+        order: 1;
+    }
+
+    .carousel-item {
+        min-height: 400px;
+    }
+
+    .carousel-index {
+        min-height: 300px;
+        overflow: hidden;
+    }
+
+    .index-h5 {
+        font-size: 28px !important;
+    }
+
+    .index-written-content p {
+        font-size: 18px !important;
+    }
+}
 
 
 @media (max-width: 768px) {
     .carousel-item img {
-        height: 100% !important;
+        height: 100%;
+        width: fit-content;
+        object-fit: cover;
     }
     h5#footer-follow{
         color:rgb(32, 4, 104);
     }
-}
-
-
-/*--------------------------------------Desktop restore original order */
-@media (min-width:768px){
-
-    .hero-section{
-        order:2;
-    }
-
-    .enquire-section{
-        order:3;
-    }
-
-    .reviews-section{
-        order:1;
-    }
-
-    #footer-resource-links a{
-        text-transform: none;      
-        font-size: 26px !important;
-        color: white;
-    }
-
-    .carousel-item {
-        height: 100%;
-        overflow: hidden;
-    }
-
-    .carousel-index{
-        height: 300px;
-        overflow: hidden;
-    }
-    .index-h5{
-        font-size: 28px !important;
-    }
-
-    .index-written-content p{
-        font-size: 18px !important;
-        
-    }
-
-   
-}
-
-
-
-
-@media (max-width: 768px) {
     .navbar-nav {
         padding: 10px 0 10px 20px;
-    }
-
-   
+    } 
 }
 
-/*------------------------------------------Footer Overlay Media Queries*/
-@media (min-width: 375px) {
-    .footer-overlay {
-        bottom: 117px;
-        right: 10px;
-        width: 290px;
-    }
-}
 
-@media (min-width: 425px) {
-    .footer-overlay {
-        bottom: 117px;
-        right: 10px;
-        width: 310px;
-    }
-}
-
-@media (min-width: 425px) {
-    .footer-overlay {
-        bottom: 117px;
-        right: 10px;
-        width: 330px;
-    }
-}
-
-@media (min-width: 474px) {
-    .footer-overlay {
-        bottom: 80px;
-        right: 10px;
-        width: 350px;
-    }
-}
-
-@media (min-width: 768px) {
-    .footer-overlay {
-        bottom: 15px;
-        right: 5px;
-        width: 400px;
-    }
-}
-@media (min-width: 992px) {
-    .footer-overlay {
-        bottom: 5px;
-        right: 25px;
-        width: 300px;
-    }
-
+@media (min-width: 992px) {  
     .carousel-item {
-        height: 100%;
+        height: 90%;
         overflow: hidden;
     }
 
@@ -536,7 +483,16 @@ iframe {
 @media (min-width: 2000px){
     a.nav-link {
         font-size: 30px;
-        margin: 0px 7px;
-        
+        margin: 0px 7px;      
 }
+    .carousel-item img {
+        height: 100% !important;
+        width: auto;
+        margin-top: 50px;
+    }
+    #photo-h2{
+        margin-top: 50px;
+    }
+    
+
 }
