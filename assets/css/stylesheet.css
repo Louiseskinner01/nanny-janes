@@ -89,7 +89,9 @@ h3#tahnkyou-h3{
     font-family: var(--secondary-font)
 }
 
-
+.red{
+    color: red;
+}
 /*---------------------------------------------------------Footer*/
 footer h2{
     color: pink;
