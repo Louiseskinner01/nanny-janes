@@ -42,6 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $body = "New enquiry from your website:\n\n";
         $body .= "Name: $name\n";
         $body .= "Email: $email\n";
+        $body .= "Contact Number: $contact\n";
         $body .= "Child's Age: $childs_age\n";
         $body .= "Reason for Contact: $reason\n\n";
         $body .= "Message:\n$message\n";
